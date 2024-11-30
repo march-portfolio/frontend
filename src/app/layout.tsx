@@ -1,6 +1,6 @@
 import { NavBar } from "@/components/navbar/page";
 
-import './globals.scss';
+import './globals.css';
 
 
 export default function RootLayout({
