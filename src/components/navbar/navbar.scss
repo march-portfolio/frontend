@@ -2,7 +2,7 @@
 .navbar{
   position: fixed;
   display: flex;
-  width: 100%;
+  width: 100vw;
   padding: 0.5rem;
   height: fit-content;
   left: 0;
@@ -19,6 +19,9 @@
     font-weight: 500;
     &:hover{
       cursor: pointer;
+      color: white;
+    }
+    &.active{
       color: white;
     }
   }

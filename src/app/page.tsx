@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <>
-    wdwdwd
+   <h1>This Home</h1>
     </>
   );
 }
