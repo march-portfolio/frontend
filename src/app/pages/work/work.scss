@@ -1,0 +1,27 @@
+.optionbar{
+  display: flex;
+  justify-content: center;
+  button{
+    font-family: "Montserrat", serif;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.75vw;
+    margin: 0 1vw;
+    &:hover{
+      font-size: 2vw;
+      text-decoration: underline;
+    }
+    &.active{
+      padding: 1vw;
+      border-radius: 10px;
+      background-color: #e0e0e0;
+      font-size: 2vw;
+      text-decoration: underline;
+    }
+  }
+}
+.workfield{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

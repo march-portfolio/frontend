@@ -2,19 +2,18 @@
 .navbar{
   position: fixed;
   display: flex;
-  width: 100vw;
-  padding: 0.5rem;
+  padding: 1vh 0.5vw;
+  width: 100%;
   height: fit-content;
   left: 0;
   top: 0;
   align-items: center;
   justify-content: space-around;
-
   background-color: #FB9AD1;
   .items{
     color: black;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.25vw;
     font-family: "Prompt", sans-serif;
     font-weight: 500;
     &:hover{

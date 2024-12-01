@@ -5,4 +5,10 @@ div{
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  a{
+    color: rgb(204, 110, 255);
+    &:hover{
+      color: pink;
+    }
+  }
 }
