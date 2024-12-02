@@ -5,23 +5,23 @@
     font-family: "Montserrat", serif;
     background-color: transparent;
     border: 0;
-    font-size: 1.75vw;
+    font-size: clamp(1.2rem, 1.75vw, 1.75rem);
     margin: 0 1vw;
     &:hover{
-      font-size: 2vw;
+      font-size: clamp(1.5rem, 2vw, 2rem);
       text-decoration: underline;
     }
     &.active{
-      padding: 1vw;
+      padding: clamp(0.25rem,0.5vw,0.5rem) clamp(1rem,1vw,1rem);
       border-radius: 10px;
       background-color: #e0e0e0;
-      font-size: 2vw;
+      font-size: clamp(1.25rem, 2vw, 2rem);
       text-decoration: underline;
     }
   }
 }
 .workfield{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }

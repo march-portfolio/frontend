@@ -4,15 +4,11 @@ export default function ContactPage(){
   return(
     <>
     <h1>This is contact</h1>
-    <div>
+    <div className='contact-field'>
       Professional Email: <a href="mailto:march.creative27@gmail.com"> march.creative27@gmail.com</a>
-    </div>
-
-    <div>
+      <br/>
       Personal Email: <a href="mailto:march.mix27@gmail.com"> march.mix27@gmail.com</a>
-    </div>
-
-    <div>
+      <br/>
       Instagram: <a href="https://www.instagram.com/marchtanu">@march_tanu</a>
       <br/>
       Line: <a href="https://line.me/ti/p/RnNtEUmp5j">march9797</a>
