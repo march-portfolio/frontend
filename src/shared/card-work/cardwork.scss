@@ -9,9 +9,10 @@
   border-radius: 8px;
   box-shadow: 2px 2px 0.5rem #8f6591;
   &:hover{
-    width: clamp(16.5rem,19vw,19rem);
-    height: clamp(23.5rem,26vw,26rem);
-    box-shadow: 2px 2px 1.5rem #ffd2f7;
+    transform: scale(1.05);
+    // width: clamp(16.5rem,19vw,19rem);
+    // height: clamp(23.5rem,26vw,26rem);
+    box-shadow: 2px 2px 1.5rem #f5b0e8;
   }
   img {
     border-radius: 4px;
