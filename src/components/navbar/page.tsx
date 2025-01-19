@@ -8,19 +8,19 @@ export function NavBar() {
   const currentPath = usePathname();
   const NavList = [
     {
-      name: "หน้าหลัก",
+      name: "Main",
       path: "/",
     },
     {
-      name: "ผลงาน",
+      name: "Work",
       path: "/pages/work",
     },
     {
-      name: "ติดต่อ",
+      name: "Contact",
       path: "/pages/contact",
     },
     {
-      name: "เกี่ยวกับ",
+      name: "About",
       path: "/pages/about",
     },
   ];
