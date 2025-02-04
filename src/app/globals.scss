@@ -7,6 +7,11 @@
 }
 
 h1{
+  font-size: clamp(1.5rem,2vw,2rem);
   font-family: "Montserrat", serif;
   text-align: center;
+  span{
+    font-weight: 400;
+    font-size: clamp(1rem,2vw,1.5rem);
+  }
 }

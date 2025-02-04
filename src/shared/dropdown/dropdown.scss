@@ -1,5 +1,5 @@
 .Dropdown{
-  margin: 2rem;
+  margin: clamp(1rem, 2vw, 2.5rem);;
 }
 
 .DropdownHead {
@@ -37,5 +37,9 @@
         font-size: clamp(0.75rem, 1.25vw, 1.25rem);
       }
     }
+  }
+  span{
+
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
 }

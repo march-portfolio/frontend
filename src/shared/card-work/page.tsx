@@ -5,7 +5,7 @@ import Image from 'next/image';
 export function CardWork(props:any){
   return(
     <>
-    <div className="container">
+    <div className="card_container">
       <label>{props.label}</label>
 
       <Image loading='lazy' src={props.img} alt="March Project Logo"></Image>

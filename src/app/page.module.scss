@@ -1,0 +1,8 @@
+.Profile{
+  display: block;
+  justify-self: center;
+  border-radius: 100%;
+  width: clamp(10rem,30vw, 25rem);
+  height: clamp(10rem,30vw, 25rem);
+  object-fit: cover;
+}

@@ -16,6 +16,8 @@ export default function ContactPage(){
       Discord: <a href="https://discordapp.com/users/1312469948391493704"> marchtanu</a>
       <br/>
       GitLab: <a href="https://gitlab.com/marchtanu"> marchtanu</a>
+      <br/>
+      LinkedIn <a href="https://www.linkedin.com/in/tanupatsoj/"> Tanupat Sojindamanee</a>
     </div>
     
    

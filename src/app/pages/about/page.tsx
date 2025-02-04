@@ -9,8 +9,9 @@ export default function AboutPage(){
     <Dropdown label="Education">
       <div>
         <ul>
-          <li>Naresuan University Secondary Demonstration School (Middle School) 2019-2022<br/><p>EIS(English integrated study) Program  GPAX: 3.10</p></li>
-          <li>Naresuan University Secondary Demonstration School (High School) 2022-2025 <br/><p>Science-Mathematic Program GPAX: 3.38</p> </li>
+          <li>Naresuan University Secondary Demonstration School (Middle School) / English integrated study Program <br/><p> 2019-2022  GPAX: 3.10</p></li>
+          <li>Naresuan University Secondary Demonstration School (High School) / Science-Mathematic Program  <br/><p> 2022-2025 GPAX: 3.38</p> </li>
+          <li>Mahidol University / Bachelor of Science in Digital Science and Technology<br/><p>2025-present</p> </li>
         </ul>
       </div>
     </Dropdown>
@@ -24,12 +25,21 @@ export default function AboutPage(){
       </div>
     </Dropdown>
 
-    <Dropdown label="Personal">
+    <Dropdown label="About me">
       <div>
-        <ul>
-          <li>Hobbies <br/> <p> Workout, Read a book, Listen to podcast, Cook. </p></li>
-          <li>Body <br/> <p> 175 cm, 65 kg. </p></li>
-        </ul>
+        <span> nam</span>
+        <span>
+          <p>
+            Name: Tanupat Sojindamanee
+          </p>
+          <p>
+            Nickname: March
+          </p>
+          <p>
+            Date of Birth: 27 March 2004
+          </p>
+    
+        </span>
       </div>
     </Dropdown>
     </>
