@@ -1,8 +1,80 @@
-.Profile{
-  display: block;
+.Profile_pic {
   justify-self: center;
   border-radius: 100%;
-  width: clamp(10rem,30vw, 25rem);
-  height: clamp(10rem,30vw, 25rem);
+  width: clamp(10rem, 25vw, 20rem);
+  height: clamp(10rem, 25vw, 20rem);
   object-fit: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  justify-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 2px 2px 1rem #5b5b5b69;
+  margin: auto 2rem; /* Center horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center vertically */
+}
+
+.contact_field {
+  display: flex;
+  gap: 1rem;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  align-items: center;
+  margin: 1rem;
+  i {
+    color: black;
+  }
+}
+.visit_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: prompt;
+  font-weight: 600;
+  color: black;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #000000;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+  }
+}
+
+.email i:hover {
+  color: #0074d4;
+}
+
+.ig i:hover {
+  color: #e4405f; /* Example color for Instagram */
+}
+
+.line i:hover {
+  color: #00c300; /* Example color for Line */
+}
+
+.discord i:hover {
+  color: #7289da; /* Example color for Discord */
+}
+
+.gitlab i:hover {
+  color: #fc6d26; /* Example color for GitLab */
+}
+
+.github i:hover {
+  color: #333; /* Example color for GitHub */
+}
+
+.linkedin i:hover {
+  color: #0077b5; /* Example color for LinkedIn */
 }

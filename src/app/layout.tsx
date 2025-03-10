@@ -1,5 +1,5 @@
+"use client";
 import { NavBar } from "@/components/navbar/page";
-
 import "./globals.scss";
 
 export default function RootLayout({
@@ -7,12 +7,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  let page = window.location.pathname === "/";
   return (
     <html lang="en">
       <body className="layout">
-        <div>
-          <NavBar />
-        </div>
+        <div>{page ? "" : <NavBar />}</div>
 
         <div>{children}</div>
       </body>

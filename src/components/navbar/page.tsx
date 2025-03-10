@@ -8,16 +8,12 @@ export function NavBar() {
   const currentPath = usePathname();
   const NavList = [
     {
-      name: "Home",
-      path: "/",
+      name: "Contact",
+      path: "/pages/contact",
     },
     {
       name: "Work",
       path: "/pages/work",
-    },
-    {
-      name: "Contact",
-      path: "/pages/contact",
     },
     {
       name: "About",
