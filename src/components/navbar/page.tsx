@@ -3,18 +3,21 @@
 import Link from "next/link";
 import "./navbar.scss";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export function NavBar() {
   const currentPath = usePathname();
+  const [OpenMenu, setMenu] = useState<Boolean>(false);
   const NavList = [
-    {
-      name: "Contact",
-      path: "/pages/contact",
-    },
     {
       name: "Work",
       path: "/pages/work",
     },
+    {
+      name: "Contact",
+      path: "/pages/contact",
+    },
+
     {
       name: "About",
       path: "/pages/about",
@@ -24,7 +27,7 @@ export function NavBar() {
     <>
       {/* 
       
-      use this set of code is already fine but using array object and map it out is just to show off my skill.
+      use this set of code is already fine but using array object and map is just to show off my skill. from me
 
       <div className="navbar">
       <Link href='/' className="items">หน้าหลัก</Link >
@@ -35,15 +38,41 @@ export function NavBar() {
     */}
 
       <div className="navbar">
-        {NavList.map((item, index) => (
-          <Link
-            key={index}
-            href={`${item["path"]}`}
-            className={item["path"] === currentPath ? "items active" : "items"}
-          >
-            {item["name"]}
-          </Link>
-        ))}
+        <div className="mainpage">
+          <Link className="marchtanu" href="/"> MarchTanu </Link>
+        </div>
+        <div className="menu" onClick={() => setMenu(!OpenMenu)}>
+         <div className="marchtanu" onClick={() => setMenu(!OpenMenu)}>MarchTanu</div>
+          <i className="bi bi-caret-down-fill"></i>
+        </div>
+        <div className={"nav_dropdown_" + OpenMenu}>
+
+            {NavList.map((item, index) => (
+            <Link
+              key={index}
+              href={`${item["path"]}`}
+              className={
+                item["path"] === currentPath ? "items active" : "items"
+              }
+            >
+              {item["name"]}
+            </Link>
+          ))}
+     
+          </div>
+        <div className="navlist">
+          {NavList.map((item, index) => (
+            <Link
+              key={index}
+              href={`${item["path"]}`}
+              className={
+                item["path"] === currentPath ? "items active" : "items"
+              }
+            >
+              {item["name"]}
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );

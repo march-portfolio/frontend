@@ -7,11 +7,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let page = window.location.pathname === "/";
+  // let page = window.location.pathname === "/";
   return (
     <html lang="en">
       <body className="layout">
-        <div>{page ? "" : <NavBar />}</div>
+        {/* <div>{page ? "" : <NavBar />}</div> */}
+        <div><NavBar/></div>
 
         <div>{children}</div>
       </body>
