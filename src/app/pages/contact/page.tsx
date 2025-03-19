@@ -1,34 +1,10 @@
+import ContactForm from "@/components/contact-form/page";
 import "./contact.scss";
 
 export default function ContactPage() {
   return (
     <>
-      <h1>This is contact</h1>
-      <div className="contact-field">
-        Email:{" "}
-        <a href="mailto:march.creative27@gmail.com">
-          {" "}
-          march.creative27@gmail.com
-        </a>
-        <br />
-        Instagram: <a href="https://www.instagram.com/marchtanu">@march_tanu</a>
-        <br />
-        Line: <a href="https://line.me/ti/p/RnNtEUmp5j">march9797</a>
-        <br />
-        Discord:{" "}
-        <a href="https://discordapp.com/users/1312469948391493704">
-          {" "}
-          marchtanu
-        </a>
-        <br />
-        GitLab: <a href="https://gitlab.com/marchtanu"> marchtanu</a>
-        <br />
-        LinkedIn{" "}
-        <a href="https://www.linkedin.com/in/tanupatsoj/">
-          {" "}
-          Tanupat Sojindamanee
-        </a>
-      </div>
+          <ContactForm/>
       <div className="contact_icon">
         <a className="linkedin" href="https://www.linkedin.com/in/tanupatsoj/">
           <i className="bi bi-linkedin"></i>
