@@ -16,3 +16,31 @@ h1{
     font-size: clamp(1rem,2vw,1.5rem);
   }
 }
+
+.email i:hover {
+  color: #0074d4;
+}
+
+.ig i:hover {
+  color: #e4405f; 
+}
+
+.line i:hover {
+  color: #00c300; 
+}
+
+.discord i:hover {
+  color: #7289da; 
+}
+
+.gitlab i:hover {
+  color: #fc6d26; 
+}
+
+.github i:hover {
+  color: #333;
+}
+
+.linkedin i:hover {
+  color: #0077b5;
+}

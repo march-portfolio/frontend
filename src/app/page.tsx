@@ -8,8 +8,7 @@ export default function Home() {
   return (
     <>
       <div className={page.container}>
-        <h1>Portfolio Website</h1>
-        <div></div>
+        <h1 className={page.porfolio}>Portfolio Website</h1>
         <Image
           className={page.Profile_pic}
           src={img}
@@ -19,13 +18,20 @@ export default function Home() {
         />
         <div>
           <h1>Tanupat Sojindamanee</h1>
-          <p>
-            I am a full-stack developer with a passion for creating and
+          <p className={page.description}>
+          I am a multi-talented developer with a passion for both art and technology.
+          My expertise lies primarily in front-end development, with some experience in back-end as well.
+          Beyond coding, my interests include filmmaking, graphic design, drawing, 
+          bodybuilding, music, and communication.
+          These are the ways I like to express my ideas.
+          <br/>
+          <b>*To know me better in specific field check out my website*</b>
+            {/* I am a full-stack developer with a passion for creating and
             developing web applications. I have experience in both front-end and
             back-end development, and I am always looking to learn new
             technologies and improve my skills. I am currently looking for new
             opportunities to work on exciting projects and collaborate with
-            other developers.
+            other developers. */}
           </p>
         </div>
         <div className={page.contact_field}>

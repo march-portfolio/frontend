@@ -12,3 +12,17 @@
     }
   }
 }
+.contact_icon{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 1rem;
+  font-size: 2rem;
+
+  a{
+    color: black;
+  }
+}
