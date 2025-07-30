@@ -3,6 +3,9 @@ import Image from "next/image";
 import img from "../assets/Profile.jpg";
 import page from "./page.module.scss";
 import Link from "next/link";
+
+export const runtime = "edge";
+
 export default function Home() {
 
   return (
