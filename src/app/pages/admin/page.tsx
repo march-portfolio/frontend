@@ -1,3 +1,4 @@
+"use client";
 import { PostAPI } from "@/api/api";
 import { useState } from "react";
 
