@@ -14,7 +14,7 @@ export default function ContactForm() {
     const handleSubmit = async (e:any) => {
         e.preventDefault();
         setStatus("Sent");
-        const response = await PostAPI('msg',formData)
+        const response = await PostAPI('contacts',formData)
         setStatus(response)  
     };
 
