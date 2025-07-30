@@ -21,7 +21,7 @@ export default function ContactForm() {
     return (
         <div className="contact-container">
             <form className="contact-form" onSubmit={handleSubmit}>
-                <h1><label htmlFor="reason">Contact Me</label></h1>
+                <h1>Contact Me</h1>
                 <input
                     type="text"
                     name="name"
@@ -39,7 +39,7 @@ export default function ContactForm() {
                     required
                 />
                 
-                <select id="reason" name="reason" onChange={handleChange} value={formData.reason} required>
+                <select title="purpose of contact" id="reason" name="reason" onChange={handleChange} value={formData.reason} required>
                     <option value="" disabled>Select a reason</option>
                     <option value="code">Code</option>
                     <option value="model">Model</option>

@@ -7,7 +7,7 @@ import img from "../../../assets/march_project_logo.png";
 export default function WorkPage() {
   const [field, setField] = useState("All");
   //API call data
-  const [work, setWork] = useState([
+  const work = [
     {
       label: "March Project",
       img: img,
@@ -20,12 +20,10 @@ export default function WorkPage() {
       type: "Media",
       description: "practice",
     },
-  ]);
+  ];
 
   return (
     <>
-      <h1>This is work</h1>
-
       <div className="optionbar">
         <JobField_Btn field={field} setField={setField} label="All" />
         <JobField_Btn field={field} setField={setField} label="Code" />

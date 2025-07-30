@@ -7,11 +7,11 @@ import { useState } from "react";
 
 export function NavBar() {
   const currentPath = usePathname();
-  const [OpenMenu, setMenu] = useState<Boolean>(false);
+  const [OpenMenu, setMenu] = useState<boolean>(false);
   const NavList = [
     {
       name: "Work",
-      path: "/pages/work",
+      path: "/pages/works",
     },
     {
       name: "Contact",

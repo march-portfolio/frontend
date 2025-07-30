@@ -5,18 +5,12 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  a{
-    color: rgb(204, 110, 255);
-    &:hover{
-      color: pink;
-    }
-  }
 }
 .contact_icon{
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom: 0;
+  bottom: -0.5rem;
   left: 50%;
   transform: translate(-50%, -50%);
   gap: 1rem;

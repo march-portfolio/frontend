@@ -13,7 +13,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: clamp(20rem, 90vw, 60rem);
-  height: fit-content;
+  // height: clamp(20rem, 40vw, fit-content);
+  // margin: 5rem 0;
   background-color: rgb(255, 255, 255);
   justify-items: center;
   padding: 0.5rem;

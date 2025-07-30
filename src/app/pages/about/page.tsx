@@ -15,7 +15,7 @@ export default function AboutPage(){
         </ul>
       </div>
     </Dropdown>
-
+{/* 
     <Dropdown label="Certificate">
       <div>
         <ul>
@@ -41,7 +41,7 @@ export default function AboutPage(){
     
         </span>
       </div>
-    </Dropdown>
+    </Dropdown> */}
     </>
   )
 }
