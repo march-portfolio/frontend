@@ -1,25 +1,30 @@
 import axios from "axios";
 
-const url = 'http://localhost:3000'
+const url = "http://localhost:8000";
 // const url2 = 'https://formsubmit.co/march.creative27@email.com'
 
-export async function TestAPI(body: unknown){
-  try{
-    const response = await axios.post(`${url}`,body)     
-    return response.data
+export async function TestAPI(body: any) {
+  try {
+    const response = await axios.post(`${url}`, body);
+    return response.data;
+  } catch (err: any) {
+    return err.data.message;;
+  }
 }
-catch(err:any){
-  return err.response.data.message
+export async function PostAPI(path: string, body: any) {
+  try {
+    const response = await axios.post(`${url}${path}`, body);
+    return  response.data;
+  } catch (err: any) {
+    return err.response.data.message;
+  }
 }
-   
-}
-export async function PostAPI(path:string,body: unknown){
-  try{
-    const response = await axios.post(`${url}${path}`,body)     
-    return response.data
-}
-catch(err:any){
-  return err.response.data.message
-}
-   
+
+export async function GetAPI(path: string) {
+  try {
+    const response = await axios.get(`${url}${path}`);
+    return  response.data;
+  } catch (err: any) {
+    return err.data.message;;
+  }
 }
