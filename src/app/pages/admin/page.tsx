@@ -1,6 +1,5 @@
 "use client";
 import { GetAPI } from "@/api/api";
-import { log } from "console";
 import { useEffect, useState } from "react";
 
 export default function AdminPage() {
