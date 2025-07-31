@@ -6,14 +6,17 @@ const url = "https://marchtanu-api.onrender.com";
 export async function TestAPI(body: any) {
   try {
     const response = await axios.post(`${url}`, body);
+        // console.log(response);
     return response.data;
   } catch (err: any) {
-    return err.data.message;;
+    // console.log(err);
+    return err.data.message;
   }
 }
 export async function PostAPI(path: string, body: any) {
   try {
     const response = await axios.post(`${url}${path}`, body);
+          // console.log(response);
     return  response;
   } catch (err: any) {
     return err.response.data.message;
@@ -23,8 +26,9 @@ export async function PostAPI(path: string, body: any) {
 export async function GetAPI(path: string) {
   try {
     const response = await axios.get(`${url}${path}`);
+          // console.log(response);
     return  response.data;
   } catch (err: any) {
-    return err.data.message;;
+    return err.data.message;
   }
 }
