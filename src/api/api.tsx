@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:8000";
+const url = "https://marchtanu-api.onrender.com";
 // const url2 = 'https://formsubmit.co/march.creative27@email.com'
 
 export async function TestAPI(body: any) {
@@ -14,7 +14,7 @@ export async function TestAPI(body: any) {
 export async function PostAPI(path: string, body: any) {
   try {
     const response = await axios.post(`${url}${path}`, body);
-    return  response.data;
+    return  response;
   } catch (err: any) {
     return err.response.data.message;
   }
