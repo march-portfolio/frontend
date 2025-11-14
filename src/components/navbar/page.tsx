@@ -41,12 +41,11 @@ export function NavBar() {
         <div className="mainpage">
           <Link className="marchtanu" href="/"> MarchTanu </Link>
         </div>
-        <div className="menu" onClick={() => setMenu(!OpenMenu)}>
-         <div className="marchtanu" onClick={() => setMenu(!OpenMenu)}>MarchTanu</div>
+        <div className="menu" onBlur={()=> setMenu(false)} onClick={() => setMenu(!OpenMenu)}>
+         <div className="marchtanu">MarchTanu</div>
           <i className="bi bi-caret-down-fill"></i>
         </div>
         <div className={"nav_dropdown_" + OpenMenu}>
-
             {NavList.map((item, index) => (
             <Link
               key={index}
@@ -55,7 +54,7 @@ export function NavBar() {
                 item["path"] === currentPath ? "items active" : "items"
               }
             >
-              {item["name"]}
+              {item["name"]} 
             </Link>
           ))}
      
@@ -74,6 +73,8 @@ export function NavBar() {
           ))}
         </div>
       </div>
+      
+       {OpenMenu ?<div className="nav_dropdown_bg" onClick={()=> setMenu(false)}/> : ''}
     </>
   );
 }

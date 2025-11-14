@@ -1,66 +1,66 @@
-
-  .navbar {
-    position: fixed;
-    top: 4%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: grid;
-    grid-template-columns: 1fr 0.5fr;
-    justify-content: space-between;
-    padding: 1rem 2rem 1rem;
-    background-color: #fffffb;
-    border-radius: 1rem;
-    width: 70vw;
-    height: 2rem;
-    z-index: 99;
+.navbar {
+  position: fixed;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem;
+  background-color: #fffffb;
+  border-radius: 1rem;
+  width: 70vw;
+  height: 2rem;
+  z-index: 99;
+}
+.navlist {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.mainpage {
+  transform: translateY(clamp(-5px, -10%, -4px));
+}
+.items {
+  position: relative;
+  width: fit-content;
+  color: black;
+  text-decoration: none;
+  font-size: clamp(1.4rem, 1.75vw, 1.5rem);
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: clamp(-6px, 1vh, 1rem);
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: transform 0.2s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: center;
   }
-  .navlist {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: space-between;
+  &:hover::after,
+  &.active::after {
+    transform: scaleX(1);
   }
-  .mainpage {
-    transform: translateY(clamp(-5px, -10%, -4px));
-
-  }
-  .items {
-    position: relative;
-    width: fit-content;
-    color: black;
-    text-decoration: none;
-    font-size: clamp(1.4rem, 1.75vw, 1.5rem);
-    font-family: "Prompt", sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: clamp(-6px, 1vh, 1rem);
-      width: 100%;
-      height: 3px;
-      background-color: black;
-      transition: transform 0.2s ease-in-out;
-      transform: scaleX(0);
-      transform-origin: center;
-    }
-    &:hover::after,
-    &.active::after {
-      transform: scaleX(1);
-    }
-  }
-  .marchtanu{
-    position: relative;
-    height: fit-content;
-    color: black;
-    text-decoration: none;
-    font-size: clamp(1.65rem, 1.75vw, 2.5rem);
-    font-family: "Prompt", sans-serif;
-    font-weight: 500;
-  }
-  .menu,.nav_dropdown_true, .nav_dropdown_false {
-    display: none;
-  }
+}
+.marchtanu {
+  position: relative;
+  height: fit-content;
+  color: black;
+  text-decoration: none;
+  font-size: clamp(1.65rem, 1.75vw, 2.5rem);
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+}
+.menu,
+.nav_dropdown_true,
+.nav_dropdown_false {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .navbar {
@@ -71,7 +71,7 @@
     padding: 1rem 4rem;
     height: 4vw;
   }
-  .mainpage{
+  .mainpage {
     display: none;
   }
   .menu {
@@ -87,7 +87,8 @@
       font-size: 1.25rem;
     }
   }
-  .nav_dropdown_false , .nav_dropdown_true {
+  .nav_dropdown_false,
+  .nav_dropdown_true {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -115,8 +116,16 @@
     justify-content: center;
   }
 
+  .nav_dropdown_bg {
+    position: fixed;
+    inset: 0; 
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 98;
+  }
+
   .navlist {
     display: none;
   }
 }
-

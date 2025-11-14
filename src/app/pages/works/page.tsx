@@ -1,25 +1,27 @@
 "use client";
+import CodeWork from "@/components/code-work/page";
+import MCWork from "@/components/mc-work/page";
 import "./work.scss";
-
+import ModelWork from "@/components/model-work/page";
 
 export default function WorkPage() {
-  return(
+  return (
     <>
-    <div className="workpage-background"></div>
-    <div className="workpage-layout">
-      <div className="work-display">
-        <h1>Project 1</h1>
+      <div className="workpage-background"></div>
+      <div className="workpage-layout">
+        <div className="work-display">
+          <CodeWork/>
+        </div>
+        <div className="work-display">
+          <MCWork/>
+        </div>
+        <div className="work-display">
+          <ModelWork/>
+        </div>
+        <div className="work-display">
+
+        </div>
       </div>
-      <div className="work-display">
-      <h1>Project 2</h1>
-        </div>
-        <div className="work-display">
-        <h1>Project 3</h1>
-        </div>
-        <div className="work-display">
-        <h1>Project 4</h1>
-        </div>
-    </div>
     </>
-  )
+  );
 }
