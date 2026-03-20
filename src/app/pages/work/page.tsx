@@ -34,7 +34,7 @@ export default function WorkPage() {
 
       <div className="workfield">
         {work.map((work, index) => {
-          if(field == "All" || field == work.type) {
+          if (field == "All" || field == work.type) {
             return (
               <CardWork
                 key={index}
@@ -43,7 +43,7 @@ export default function WorkPage() {
                 description={work.description}
               />
             );
-          } 
+          }
         })}
       </div>
     </>

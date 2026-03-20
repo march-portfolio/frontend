@@ -1,23 +1,34 @@
-"use client";
-import { NavBar } from "@/components/navbar/page";
+import { NavBar } from "@/components/NavBar";
 import "./globals.scss";
+import { Montserrat, Prompt, IBM_Plex_Sans_Thai } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const prompt = Prompt({
+  subsets: ["latin", "thai"],
+  variable: "--font-prompt",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const ibmPlexSansThai = IBM_Plex_Sans_Thai({
+  subsets: ["thai"],
+  variable: "--font-ibm-plex-sans-thai",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // let page = window.location.pathname === "/";
   return (
-    <html lang="en">
-        <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        />
+    <html lang="en" className={`${montserrat.variable} ${prompt.variable} ${ibmPlexSansThai.variable}`}>
       <body className="layout">
-        {/* <div>{page ? "" : <NavBar />}</div> */}
-        <div><NavBar/></div>
-
+        <div><NavBar /></div>
         <div>{children}</div>
       </body>
     </html>

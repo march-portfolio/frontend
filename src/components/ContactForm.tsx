@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./contact-form.scss";
+import "./contact-form/contact-form.scss";
 import { PostAPI, SendEmailAPI } from "@/api/api";
 
 export default function ContactForm() {
@@ -19,17 +19,20 @@ export default function ContactForm() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setStatus("Sending...");
-        const emailResponse = await SendEmailAPI(formData);
-    console.log(emailResponse);
-    const response = await PostAPI("/contacts", formData);
-
-
-    if (response.status == 200 || response.status == 201) {
-      setStatus("Sent");
-    } else {
+    try {
+      await SendEmailAPI(formData);
+      const response = await PostAPI("/contacts", formData);
+      if (response.status === 200 || response.status === 201) {
+        setStatus("Sent");
+      } else {
+        setStatus("Error, Please contact me via other platforms");
+      }
+    } catch (error) {
+      console.error(error);
       setStatus("Error, Please contact me via other platforms");
     }
   };
+
   return (
     <div className="contact-container">
       <form className="contact-form" onSubmit={handleSubmit}>

@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   button{
-    font-family: "Montserrat", serif;
+    font-family: var(--font-montserrat), serif;
     background-color: transparent;
     border: 0;
     font-size: clamp(1.2rem, 1.75vw, 1.75rem);

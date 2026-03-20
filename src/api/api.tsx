@@ -1,50 +1,55 @@
 import axios from "axios";
-import { Resend } from "resend";
 
-const resend = new Resend("re_WsbVitZu_GiM2N5yhVy8CxzeZZhCbEZ32");
-const url = "https://marchtanu-api.up.railway.app";
-// const url2 = 'https://formsubmit.co/march.creative27@email.com'
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://marchtanu-api.up.railway.app";
 
-export async function TestAPI(body: any) {
+/**
+ * Standardized API call utility.
+ */
+async function apiCall(method: "get" | "post", path: string, body?: any) {
   try {
-    const response = await axios.post(`${url}`, body);
-    // console.log(response);
-    return response.data;
-  } catch (err: any) {
-    // console.log(err);
-    return err.data.message;
-  }
-}
-export async function PostAPI(path: string, body: any) {
-  try {
-    const response = await axios.post(`${url}${path}`, body);
-    // console.log(response);
-    return response;
-  } catch (err: any) {
-    return err.response.data.message;
-  }
-}
-
-export async function GetAPI(path: string) {
-  try {
-    const response = await axios.get(`${url}${path}`);
-    // console.log(response);
-    return response.data;
-  } catch (err: any) {
-    return err.data.message;
-  }
-}
-
-export async function SendEmailAPI(body: any) {
-  try {
-    const response = await resend.emails.send({
-      from: body.email,
-      to: ["march.creative27@gmail.com"],
-      subject: body.reason,
-      html: body,
+    const response = await axios({
+      method,
+      url: `${apiUrl}${path}`,
+      data: body,
     });
     return response;
   } catch (err: any) {
-    return err.data.message;
+    const errorMessage = err.response?.data?.message || err.message || "An error occurred";
+    console.error(`API Error (${method.toUpperCase()} ${path}):`, errorMessage);
+    throw new Error(errorMessage);
+  }
+}
+
+export async function TestAPI(body: any) {
+  const response = await apiCall("post", "", body);
+  return response.data;
+}
+
+export async function PostAPI(path: string, body: any) {
+  return await apiCall("post", path, body);
+}
+
+export async function GetAPI(path: string) {
+  const response = await apiCall("get", path);
+  return response.data;
+}
+
+/**
+ * SendEmailAPI should be called from the server side or a Server Action
+ * to avoid exposing the Resend API key.
+ */
+export async function SendEmailAPI(formData: any) {
+  try {
+    // Note: In Next.js App Router, you should probably move this to a Server Action
+    // or an API route (e.g., /api/send-email) to keep the RESEND_API_KEY secure.
+    // For now, I'm just fixing the utility to use the environment variable.
+    const response = await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+    return await response.json();
+  } catch (err: any) {
+    console.error("Email API Error:", err);
+    throw err;
   }
 }

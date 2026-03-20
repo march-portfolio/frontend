@@ -14,7 +14,7 @@
 
     input,select,
     textarea {
-      font-family: prompt;
+      font-family: var(--font-prompt), sans-serif;
       margin: 10px;
       padding: 10px;
       border: 1px solid #ccc;

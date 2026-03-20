@@ -10,7 +10,7 @@
 
 h1{
   font-size: clamp(1.5rem,2vw,2rem);
-  font-family: "Montserrat", serif;
+  font-family: var(--font-montserrat), serif;
   text-align: center;
   span{
     font-weight: 400;

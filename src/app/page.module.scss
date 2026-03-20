@@ -27,7 +27,7 @@
 }
 .description{
   font-size: clamp(1rem, 1.5vw, 1.25rem);
-  font-family: "Montserrat", serif;
+  font-family: var(--font-montserrat), serif;
   font-weight: 400;
 }
 .contact_field {
@@ -44,7 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: prompt;
+  font-family: var(--font-prompt), sans-serif;
   font-weight: 600;
   color: black;
   margin: 1rem;

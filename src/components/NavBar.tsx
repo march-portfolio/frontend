@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import "./navbar.scss";
+import "./navbar/navbar.scss";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -17,64 +17,46 @@ export function NavBar() {
       name: "Contact",
       path: "/pages/contact",
     },
-
     {
       name: "About",
       path: "/pages/about",
     },
   ];
+
   return (
     <>
-      {/* 
-      
-      use this set of code is already fine but using array object and map is just to show off my skill. from me
-
-      <div className="navbar">
-      <Link href='/' className="items">หน้าหลัก</Link >
-      <Link href='/pages/work' className="items">ผลงาน</Link >
-      <Link href='/pages/contact' className="items">ติดต่อ</Link >
-      <Link href='/pages/about' className="items">เกี่ยวกับ</Link >
-    </div> 
-    */}
-
       <div className="navbar">
         <div className="mainpage">
           <Link className="marchtanu" href="/"> MarchTanu </Link>
         </div>
-        <div className="menu" onBlur={()=> setMenu(false)} onClick={() => setMenu(!OpenMenu)}>
-         <div className="marchtanu">MarchTanu</div>
+        <div className="menu" onBlur={() => setMenu(false)} onClick={() => setMenu(!OpenMenu)}>
+          <div className="marchtanu">MarchTanu</div>
           <i className="bi bi-caret-down-fill"></i>
         </div>
         <div className={"nav_dropdown_" + OpenMenu}>
-            {NavList.map((item, index) => (
+          {NavList.map((item, index) => (
             <Link
               key={index}
               href={`${item["path"]}`}
-              className={
-                item["path"] === currentPath ? "items active" : "items"
-              }
+              className={item["path"] === currentPath ? "items active" : "items"}
             >
-              {item["name"]} 
+              {item["name"]}
             </Link>
           ))}
-     
-          </div>
+        </div>
         <div className="navlist">
           {NavList.map((item, index) => (
             <Link
               key={index}
               href={`${item["path"]}`}
-              className={
-                item["path"] === currentPath ? "items active" : "items"
-              }
+              className={item["path"] === currentPath ? "items active" : "items"}
             >
               {item["name"]}
             </Link>
           ))}
         </div>
       </div>
-      
-       {OpenMenu ?<div className="nav_dropdown_bg" onClick={()=> setMenu(false)}/> : ''}
+      {OpenMenu ? <div className="nav_dropdown_bg" onClick={() => setMenu(false)} /> : ''}
     </>
   );
 }

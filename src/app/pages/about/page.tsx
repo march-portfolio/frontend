@@ -1,21 +1,34 @@
-"use client"
+"use client";
 import { Dropdown } from "@/shared/dropdown/page";
-import './about.scss';
+import "./about.scss";
 
-export default function AboutPage(){
-  return(
+export default function AboutPage() {
+  return (
     <>
-    <h1>This is about</h1>
-    <Dropdown label="Education">
-      <div>
-        <ul>
-          <li>Naresuan University Secondary Demonstration School (Middle School) / English integrated study Program <br/><p> 2019-2022  GPAX: 3.10</p></li>
-          <li>Naresuan University Secondary Demonstration School (High School) / Science-Mathematic Program  <br/><p> 2022-2025 GPAX: 3.38</p> </li>
-          <li>Mahidol University / Bachelor of Science in Digital Science and Technology<br/><p>2025-present</p> </li>
-        </ul>
-      </div>
-    </Dropdown>
-{/* 
+      <h1>This is about</h1>
+      <Dropdown label="Education">
+        <div>
+          <ul>
+            <li>
+              Naresuan University Secondary Demonstration School (Middle School)
+              / English integrated study Program <br />
+              <p> 2019-2022 GPAX: 3.10</p>
+            </li>
+            <li>
+              Naresuan University Secondary Demonstration School (High School) /
+              Science-Mathematic Program <br />
+              <p> 2022-2025 GPAX: 3.38</p>{" "}
+            </li>
+            <li>
+              Mahidol University / Bachelor of Science in Digital Science and
+              Technology
+              <br />
+              <p>2025-present</p>{" "}
+            </li>
+          </ul>
+        </div>
+      </Dropdown>
+      {/* 
     <Dropdown label="Certificate">
       <div>
         <ul>
@@ -43,5 +56,5 @@ export default function AboutPage(){
       </div>
     </Dropdown> */}
     </>
-  )
+  );
 }
