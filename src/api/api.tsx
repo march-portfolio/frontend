@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://marchtanu-api.up.railway.app";
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 /**
  * Standardized API call utility.
