@@ -8,9 +8,11 @@ export default function AdminPage() {
   const UpdateContacts = async () => {
     const response = await GetAPI("/contacts");
     setContacts(response);
+    console.log(response);
   };
   useEffect(() => {
     UpdateContacts();
+    console.log(contacts);
   }, []);
   return (
     <>

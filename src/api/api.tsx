@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const apiUrl =
+  process.env.NEXT_PUBLIC_API_URL || "http://marchtanu-api.up.railway.app";
 
 /**
  * Standardized API call utility.
@@ -14,7 +15,8 @@ async function apiCall(method: "get" | "post", path: string, body?: any) {
     });
     return response;
   } catch (err: any) {
-    const errorMessage = err.response?.data?.message || err.message || "An error occurred";
+    const errorMessage =
+      err.response?.data?.message || err.message || "An error occurred";
     console.error(`API Error (${method.toUpperCase()} ${path}):`, errorMessage);
     throw new Error(errorMessage);
   }
@@ -43,7 +45,7 @@ export async function SendEmailAPI(formData: any) {
     console.log("SendEmailAPI called (mocked):", formData);
     // Returning a mock success response
     return { message: "Email sending simulated successfully." };
-    
+
     /*
     const response = await fetch("/api/send", {
       method: "POST",
