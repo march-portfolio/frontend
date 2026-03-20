@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import "./admin.scss";
 
 export default function AdminPage() {
-const [contacts, setContacts] = useState<any[]>([{}]);
+  const [contacts, setContacts] = useState<any[]>([{}]);
   const UpdateContacts = async () => {
-    const response = await GetAPI('/contacts');
+    const response = await GetAPI("/contacts");
     setContacts(response);
-  }
+  };
   useEffect(() => {
     UpdateContacts();
   }, []);
@@ -25,18 +25,21 @@ const [contacts, setContacts] = useState<any[]>([{}]);
           </tr>
         </thead>
         <tbody>
-          {Array.isArray(contacts) && contacts.map((item, index) => (
-            <tr key={index}>
-              <td>{item.name}</td>
-              <td>{item.email}</td>
-              <td>{item.reason}</td>
-              <td>{item.message}</td>
-            </tr>
-          ))}
+          {Array.isArray(contacts) &&
+            contacts.map((item, index) => (
+              <tr key={index}>
+                <td>{item.data.name}</td>
+                <td>{item.data.email}</td>
+                <td>{item.data.reason}</td>
+                <td>{item.data.message}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
 
-      <button onClick={UpdateContacts} className="contact-button">Update</button>
+      <button onClick={UpdateContacts} className="contact-button">
+        Update
+      </button>
     </>
   );
 }
