@@ -40,14 +40,17 @@ export async function GetAPI(path: string) {
  */
 export async function SendEmailAPI(formData: any) {
   try {
-    // Note: In Next.js App Router, you should probably move this to a Server Action
-    // or an API route (e.g., /api/send-email) to keep the RESEND_API_KEY secure.
-    // For now, I'm just fixing the utility to use the environment variable.
+    console.log("SendEmailAPI called (mocked):", formData);
+    // Returning a mock success response
+    return { message: "Email sending simulated successfully." };
+    
+    /*
     const response = await fetch("/api/send", {
       method: "POST",
       body: JSON.stringify(formData),
     });
     return await response.json();
+    */
   } catch (err: any) {
     console.error("Email API Error:", err);
     throw err;
