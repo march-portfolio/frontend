@@ -7,12 +7,10 @@ export default function AdminPage() {
   const [contacts, setContacts] = useState<any[]>([]);
   const UpdateContacts = async () => {
     const response = await GetAPI("/contacts");
-    setContacts(response);
-    console.log(response);
+    setContacts(response.data);
   };
   useEffect(() => {
     UpdateContacts();
-    console.log(contacts);
   }, []);
   return (
     <>
