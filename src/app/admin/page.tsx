@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./admin.scss";
 
 export default function AdminPage() {
-  const [contacts, setContacts] = useState<any[]>([{}]);
+  const [contacts, setContacts] = useState<any[]>([]);
   const UpdateContacts = async () => {
     const response = await GetAPI("/contacts");
     setContacts(response);
@@ -28,10 +28,10 @@ export default function AdminPage() {
           {Array.isArray(contacts) &&
             contacts.map((item, index) => (
               <tr key={index}>
-                <td>{item.data.name}</td>
-                <td>{item.data.email}</td>
-                <td>{item.data.reason}</td>
-                <td>{item.data.message}</td>
+                <td>{item.data?.name}</td>
+                <td>{item.data?.email}</td>
+                <td>{item.data?.reason}</td>
+                <td>{item.data?.message}</td>
               </tr>
             ))}
         </tbody>
