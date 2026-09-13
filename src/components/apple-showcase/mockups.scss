@@ -1,0 +1,962 @@
+/* =========================================================
+   APPLE MOCKUP WINDOWS STYLING
+   ========================================================= */
+
+.apple-mockup-window {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  background-color: #1a1a1d;
+  color: #f5f5f7;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* Common Window Header */
+.window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background-color: #242428;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  .window-controls {
+    display: flex;
+    gap: 7px;
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+
+      &.red { background-color: #ff5f56; }
+      &.yellow { background-color: #ffbd2e; }
+      &.green { background-color: #27c93f; }
+    }
+  }
+
+  .window-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: #d2d2d7;
+
+    i {
+      color: #2997ff;
+      font-size: 0.95rem;
+    }
+  }
+
+  .window-actions {
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #a1a1a6;
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+
+      .status-indicator {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+
+        &.live { background-color: #30d158; box-shadow: 0 0 6px #30d158; }
+        &.active-ai { background-color: #bf5af2; box-shadow: 0 0 6px #bf5af2; }
+        &.active-render { background-color: #ff9f0a; box-shadow: 0 0 6px #ff9f0a; }
+        &.active-acting { background-color: #ffd60a; box-shadow: 0 0 6px #ffd60a; }
+      }
+    }
+  }
+}
+
+/* =========================================================
+   1. CODE MOCKUP
+   ========================================================= */
+.code-mockup {
+  .code-body {
+    display: flex;
+    padding: 1.25rem 1.5rem;
+    background-color: #161618;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    overflow-x: auto;
+
+    .line-numbers {
+      display: flex;
+      flex-direction: column;
+      padding-right: 1.25rem;
+      color: #55555c;
+      user-select: none;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: right;
+    }
+
+    .code-content {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: #e5e5ea;
+
+      code {
+        font-family: inherit;
+        color: #d1d1d6;
+      }
+    }
+  }
+
+  .mockup-footer-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 1.5rem;
+    background-color: #1f1f23;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    .stat-chip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .stat-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #86868b;
+      }
+
+      .stat-val {
+        font-size: 0.86rem;
+        font-weight: 600;
+        color: #f5f5f7;
+      }
+    }
+  }
+}
+
+/* =========================================================
+   2. AI MOCKUP (AUHIP & JARVIS)
+   ========================================================= */
+.ai-mockup {
+  border-color: rgba(191, 90, 242, 0.15);
+
+  .ai-interface-body {
+    padding: 1.75rem;
+    background: linear-gradient(180deg, #18181c 0%, #121215 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ai-agent-chain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+
+    .chain-node {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      background-color: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+
+      .node-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: rgba(191, 90, 242, 0.15);
+        color: #bf5af2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+
+      .node-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .node-title {
+          font-size: 0.84rem;
+          font-weight: 600;
+          color: #f5f5f7;
+        }
+
+        .node-detail {
+          font-size: 0.74rem;
+          color: #86868b;
+        }
+      }
+
+      .node-metric {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #bf5af2;
+        background: rgba(191, 90, 242, 0.1);
+        padding: 0.15rem 0.45rem;
+        border-radius: 4px;
+      }
+
+      &.complete .node-icon {
+        background: rgba(48, 209, 88, 0.15);
+        color: #30d158;
+      }
+    }
+
+    .chain-connector {
+      width: 16px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .ai-terminal-log {
+    background-color: #0b0b0e;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-family: ui-monospace, "SF Mono", monospace;
+    font-size: 0.82rem;
+    line-height: 1.5;
+
+    p {
+      margin: 0.2rem 0;
+    }
+
+    .log-prompt { color: #bf5af2; font-weight: 600; }
+    .log-success { color: #30d158; }
+    .log-muted { color: #636366; }
+  }
+}
+
+/* =========================================================
+/* =========================================================
+   3. MASTER OF CEREMONIES (MC) MOCKUP (LIVE STAGE CONSOLE)
+   ========================================================= */
+.mc-mockup {
+  border-color: rgba(255, 45, 85, 0.2);
+
+  .mc-board-body {
+    padding: 1.75rem;
+    background: linear-gradient(180deg, #18181c 0%, #101012 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .stage-hero {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    .stage-badge-icon {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 12px;
+      background: rgba(255, 45, 85, 0.15);
+      color: #ff2d55;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 16px rgba(255, 45, 85, 0.2);
+    }
+
+    .stage-meta-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      text-align: left;
+
+      .event-headline-row {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        margin-bottom: 0.25rem;
+
+        .event-tag {
+          background-color: #eb0028;
+          color: #ffffff;
+          font-size: 0.72rem;
+          font-weight: 800;
+          padding: 0.15rem 0.55rem;
+          border-radius: 4px;
+          letter-spacing: 0.5px;
+        }
+
+        .event-date {
+          font-size: 0.76rem;
+          color: #8e8e93;
+        }
+      }
+
+      .stage-role-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #f5f5f7;
+        margin: 0 0 0.25rem;
+        letter-spacing: -0.015em;
+      }
+
+      .stage-role-desc {
+        font-size: 0.82rem;
+        line-height: 1.45;
+        color: #a1a1a6;
+        margin: 0;
+      }
+    }
+
+    .audio-telemetry {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      align-items: flex-end;
+      min-width: 110px;
+
+      .telemetry-item {
+        display: flex;
+        gap: 0.45rem;
+        font-size: 0.72rem;
+
+        .telemetry-label {
+          color: #8e8e93;
+          font-weight: 700;
+        }
+
+        .telemetry-val {
+          color: #30d158;
+          font-weight: 600;
+          font-family: ui-monospace, monospace;
+        }
+      }
+
+      .live-vu-mini {
+        display: flex;
+        gap: 3px;
+        margin-top: 3px;
+
+        .vu-led {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+
+          &.green { background-color: #30d158; box-shadow: 0 0 4px #30d158; }
+          &.yellow { background-color: #ffd60a; }
+          &.red { background-color: #ff453a; }
+        }
+      }
+    }
+  }
+
+  .mc-events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .event-card {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 45, 85, 0.35);
+      }
+
+      &.active {
+        border-color: rgba(255, 45, 85, 0.28);
+        background: linear-gradient(180deg, rgba(255, 45, 85, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+      }
+
+      .event-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.65rem;
+
+        .event-card-badge {
+          font-size: 0.68rem;
+          font-weight: 800;
+          padding: 0.15rem 0.5rem;
+          border-radius: 4px;
+
+          &.red { background: rgba(255, 45, 85, 0.2); color: #ff2d55; }
+          &.blue { background: rgba(41, 151, 255, 0.2); color: #2997ff; }
+          &.gold { background: rgba(255, 214, 10, 0.2); color: #ffd60a; }
+        }
+
+        .event-status-tag {
+          font-size: 0.7rem;
+          color: #8e8e93;
+          font-weight: 600;
+        }
+      }
+
+      .event-name {
+        font-size: 0.94rem;
+        font-weight: 700;
+        color: #f5f5f7;
+        margin: 0 0 0.45rem;
+      }
+
+      .event-desc {
+        font-size: 0.78rem;
+        line-height: 1.48;
+        color: #a1a1a6;
+        margin: 0 0 1rem;
+        flex: 1;
+      }
+
+      .event-card-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 0.65rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.74rem;
+
+        .event-metric {
+          color: #d2d2d7;
+          font-weight: 600;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+
+          i {
+            color: #ff2d55;
+            font-size: 0.7rem;
+          }
+        }
+
+        .event-lang {
+          color: #2997ff;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .mc-credentials-strip {
+    background-color: #0c0c0e;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.8rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .cred-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #d2d2d7;
+
+      i {
+        color: #ff2d55;
+        font-size: 0.85rem;
+      }
+    }
+
+    .cred-divider {
+      width: 1px;
+      height: 18px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+/* =========================================================
+   4. MODEL MOCKUP (BLENDER 3D VIEWPORT)
+   ========================================================= */
+.model-mockup {
+  .viewport-3d-canvas {
+    height: 270px;
+    background: radial-gradient(circle at center, #22252a 0%, #111317 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .viewport-hud {
+      position: absolute;
+      font-size: 0.74rem;
+      color: #8e8e93;
+
+      &.top-left {
+        top: 1rem;
+        left: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      &.top-right {
+        top: 1rem;
+        right: 1.25rem;
+        display: flex;
+        gap: 0.35rem;
+
+        .hud-badge {
+          padding: 0.2rem 0.55rem;
+          border-radius: 4px;
+          background-color: rgba(255, 255, 255, 0.06);
+          font-weight: 600;
+
+          &.active {
+            background-color: #ff9f0a;
+            color: #000000;
+          }
+        }
+      }
+
+      &.bottom-bar {
+        bottom: 0.75rem;
+        left: 1.25rem;
+        right: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.72rem;
+        color: #636366;
+      }
+    }
+
+    /* 3D Rotating Isometric Wireframe Cube */
+    .geometry-showcase {
+      perspective: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      height: 140px;
+
+      .cube-3d {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-22deg) rotateY(32deg);
+        animation: rotateCube 16s infinite linear;
+
+        .face {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          border: 1.5px solid rgba(255, 159, 10, 0.65);
+          background: rgba(255, 159, 10, 0.08);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.7rem;
+          font-weight: 700;
+          color: #ff9f0a;
+          backdrop-filter: blur(2px);
+
+          &.front  { transform: rotateY(0deg) translateZ(40px); }
+          &.back   { transform: rotateY(180deg) translateZ(40px); }
+          &.right  { transform: rotateY(90deg) translateZ(40px); }
+          &.left   { transform: rotateY(-90deg) translateZ(40px); }
+          &.top    { transform: rotateX(90deg) translateZ(40px); }
+          &.bottom { transform: rotateX(-90deg) translateZ(40px); }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotateCube {
+  0% {
+    transform: rotateX(-22deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-22deg) rotateY(360deg);
+  }
+}
+
+/* =========================================================
+   5. ACTOR & MODEL MOCKUP (ME MIND Y STUDIO TALENT SLATE)
+   ========================================================= */
+.actor-model-mockup {
+  border-color: rgba(255, 214, 10, 0.2);
+
+  .talent-board-body {
+    padding: 1.75rem;
+    background: linear-gradient(180deg, #18181c 0%, #101012 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .talent-hero {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    .talent-avatar-badge {
+      position: relative;
+      width: 62px;
+      height: 62px;
+      min-width: 62px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffd60a 0%, #ff9f0a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(255, 214, 10, 0.25);
+
+      .avatar-initials {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #000000;
+        letter-spacing: 1px;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      .verified-check {
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        color: #2997ff;
+        font-size: 1.15rem;
+        background: #18181c;
+        border-radius: 50%;
+        line-height: 1;
+      }
+    }
+
+    .talent-headline-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .name-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+
+        .talent-name {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #f5f5f7;
+          margin: 0;
+          letter-spacing: -0.015em;
+        }
+
+        .stage-name-pill {
+          background-color: rgba(255, 214, 10, 0.15);
+          color: #ffd60a;
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 0.2rem 0.65rem;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 214, 10, 0.25);
+        }
+      }
+
+      .talent-title {
+        font-size: 0.86rem;
+        color: #a1a1a6;
+        margin: 0.25rem 0 0.65rem;
+      }
+
+      .talent-attributes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .attr-pill {
+          font-size: 0.74rem;
+          font-weight: 500;
+          color: #d2d2d7;
+          background-color: rgba(255, 255, 255, 0.05);
+          padding: 0.25rem 0.65rem;
+          border-radius: 6px;
+          border: 1px solid rgba(255, 255, 255, 0.07);
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+
+          i {
+            color: #ffd60a;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .talent-disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .discipline-card {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 214, 10, 0.35);
+      }
+
+      &.active-series {
+        border-color: rgba(255, 214, 10, 0.25);
+        background: linear-gradient(180deg, rgba(255, 214, 10, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+      }
+
+      .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+
+        .discipline-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.05rem;
+
+          &.acting {
+            background-color: rgba(255, 214, 10, 0.15);
+            color: #ffd60a;
+          }
+
+          &.modeling {
+            background-color: rgba(41, 151, 255, 0.15);
+            color: #2997ff;
+          }
+
+          &.brand {
+            background-color: rgba(191, 90, 242, 0.15);
+            color: #bf5af2;
+          }
+        }
+
+        .card-badge {
+          font-size: 0.68rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #8e8e93;
+          letter-spacing: 0.6px;
+        }
+      }
+
+      .discipline-title {
+        font-size: 0.94rem;
+        font-weight: 700;
+        color: #f5f5f7;
+        margin: 0 0 0.45rem;
+      }
+
+      .discipline-desc {
+        font-size: 0.78rem;
+        line-height: 1.48;
+        color: #a1a1a6;
+        margin: 0 0 1rem;
+        flex: 1;
+      }
+
+      .discipline-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 0.65rem;
+
+        .queue-status {
+          font-size: 0.73rem;
+          font-weight: 600;
+          color: #d2d2d7;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+
+          i {
+            color: #ffd60a;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .production-slate-strip {
+    background-color: #0c0c0e;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.8rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .slate-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .slate-label {
+        font-size: 0.64rem;
+        letter-spacing: 0.8px;
+        color: #8e8e93;
+        font-weight: 700;
+      }
+
+      .slate-val {
+        font-size: 0.84rem;
+        font-weight: 600;
+        color: #f5f5f7;
+
+        &.highlight {
+          color: #ffd60a;
+        }
+      }
+    }
+
+    .slate-divider {
+      width: 1px;
+      height: 24px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ai-mockup .ai-agent-chain {
+    flex-direction: column;
+    align-items: stretch;
+
+    .chain-connector {
+      width: 2px;
+      height: 12px;
+      margin: 0 auto;
+    }
+  }
+
+  .media-mockup .cinema-canvas {
+    height: 170px;
+  }
+
+  .model-mockup .viewport-3d-canvas {
+    height: 200px;
+  }
+
+  .code-mockup .code-body {
+    font-size: 0.76rem;
+  }
+
+  .mc-mockup {
+    .stage-hero {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+
+      .stage-meta-info {
+        align-items: center;
+
+        .event-headline-row {
+          justify-content: center;
+        }
+      }
+
+      .audio-telemetry {
+        align-items: center;
+      }
+    }
+
+    .mc-events-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .mc-credentials-strip {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      .cred-divider {
+        display: none;
+      }
+    }
+  }
+
+  .actor-model-mockup {
+    .talent-hero {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+
+      .talent-headline-info {
+        align-items: center;
+
+        .name-row {
+          justify-content: center;
+        }
+
+        .talent-attributes {
+          justify-content: center;
+        }
+      }
+    }
+
+    .talent-disciplines-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .production-slate-strip {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+
+      .slate-divider {
+        display: none;
+      }
+    }
+  }
+}

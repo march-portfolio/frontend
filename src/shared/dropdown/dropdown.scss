@@ -1,45 +1,134 @@
-.Dropdown{
-  margin: clamp(1rem, 2vw, 2.5rem);;
+/* =========================================================
+   APPLE SPEC DISCLOSURE DROPDOWN COMPONENT
+   Ref: Apple.md (store-utility-card + iOS disclosure)
+   ========================================================= */
+
+.Dropdown {
+  margin: clamp(0.75rem, 1.5vw, 1.25rem) 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 18px; /* {rounded.lg} from Apple.md */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* {colors.hairline} */
+  overflow: hidden;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.14);
+  }
+
+  &.open {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
 }
 
 .DropdownHead {
   display: flex;
   justify-content: space-between;
-  font-family: "Montserrat", serif;
-  font-weight: 600;
-  padding: 0.25rem 1.5vw 0.25rem 2rem;
-  align-items: baseline;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.5rem;
+  align-items: center;
+  padding: clamp(1.05rem, 1.8vw, 1.35rem) clamp(1.25rem, 2.2vw, 2rem);
+  background-color: #ffffff;
   cursor: pointer;
-  div {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  user-select: none;
+  transition: background-color 0.18s ease, transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    background-color: #fafafc; /* {colors.surface-pearl} */
   }
-  i {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+
+  &:active {
+    transform: scale(0.99); /* Apple universal active-press micro-interaction */
+  }
+
+  .DropdownTitle {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", var(--font-montserrat), sans-serif;
+    font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+    font-weight: 600; /* Apple headline weight standard */
+    letter-spacing: -0.025em; /* Signature Apple tight tracking */
+    color: #1d1d1f; /* {colors.ink} */
+    line-height: 1.2;
+  }
+
+  .DropdownIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #6e6e73;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, background-color 0.2s ease;
+
+    i {
+      font-size: 1rem;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  }
+}
+
+.Dropdown.open {
+  .DropdownHead {
+    .DropdownIconWrapper {
+      color: #0066cc; /* {colors.primary} Action Blue */
+      transform: rotate(90deg); /* Apple disclosure rotation */
+      background-color: rgba(0, 102, 204, 0.06);
+    }
   }
 }
 
 .DropdownDetails {
-  font-family: "Montserrat", serif;
-  background-color: rgb(240, 240, 240);
-  border-radius: 0 0 1rem 1rem;
-  padding-left: 1rem;
-  font-size: clamp(1rem, 1.75vw, 1.75rem);
-  ul {
-    padding: 1rem 2.5vw;
-    margin: 0;
-    li {
-      font-weight: 500;
-      font-size: clamp(1rem, 1.5vw, 1.5rem);
-      p {
-        font-weight: 400;
-        font-size: clamp(0.75rem, 1.25vw, 1.25rem);
-      }
+  background-color: #fbfbfd; /* Apple parchment-pearl canvas */
+  border-top: 1px solid rgba(0, 0, 0, 0.06); /* Hairline section divider */
+  padding: clamp(1.35rem, 2.2vw, 2.2rem) clamp(1.25rem, 2.2vw, 2rem);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", var(--font-prompt), sans-serif;
+  font-size: 17px; /* {typography.body} Apple standard */
+  line-height: 1.47;
+  letter-spacing: -0.015em;
+  color: #1d1d1f; /* {colors.body} */
+  animation: appleFadeDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  p {
+    margin: 0.5rem 0;
+    line-height: 1.47;
+    font-size: 17px;
+  }
+}
+
+@keyframes appleFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 580px) {
+  .Dropdown {
+    border-radius: 14px;
+  }
+
+  .DropdownHead {
+    padding: 0.95rem 1.15rem;
+
+    .DropdownTitle {
+      font-size: 1.08rem;
+    }
+
+    .DropdownIconWrapper {
+      width: 28px;
+      height: 28px;
     }
   }
-  span{
 
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  .DropdownDetails {
+    padding: 1.15rem 1rem;
+    font-size: 15px;
+
+    p {
+      font-size: 15px;
+    }
   }
 }

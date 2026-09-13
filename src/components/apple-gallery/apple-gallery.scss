@@ -1,0 +1,643 @@
+/* =========================================================
+   APPLE GALLERY DESIGN SYSTEM
+   Strict adherence to Apple.md: 18px utility cards, hairlines,
+   SF Pro negative tracking, parchment canvas, Action Blue #0066cc.
+   ========================================================= */
+
+.apple-gallery-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  padding-top: 80px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* ---------------- FROSTED SUB-NAVIGATION ---------------- */
+.gallery-subnav {
+  position: sticky;
+  top: 76px;
+  z-index: 90;
+  width: 100%;
+  background-color: rgba(245, 245, 247, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+
+  .subnav-inner {
+    width: min(92vw, 1200px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #0066cc;
+      text-decoration: none;
+      transition: color 0.15s ease, transform 0.15s ease;
+
+      i {
+        font-size: 0.8rem;
+      }
+
+      &:hover {
+        color: #004499;
+        transform: translateX(-2px);
+      }
+    }
+
+    .discipline-switcher {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .switcher-pill {
+        font-family: var(--font-prompt), sans-serif;
+        font-size: 0.82rem;
+        font-weight: 500;
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #6e6e73;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #1d1d1f;
+          border-color: rgba(0, 0, 0, 0.2);
+          background-color: #fafafc;
+        }
+
+        &.active {
+          background-color: #0071e3;
+          color: #ffffff;
+          border-color: #0071e3;
+          font-weight: 600;
+        }
+
+        &:active {
+          transform: scale(0.96);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.gallery-hero {
+  width: min(92vw, 1200px);
+  margin: 3rem auto 2.5rem;
+  padding: 0 1rem;
+  text-align: center;
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-family: var(--font-prompt), sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: #0066cc;
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-title {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.028em;
+    color: #1d1d1f;
+    margin-bottom: 1rem;
+  }
+
+  .hero-lead {
+    font-family: var(--font-prompt), sans-serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.55;
+    color: #424245;
+    max-width: 780px;
+    margin: 0 auto 1.75rem;
+  }
+
+  .hero-stats-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #333336;
+
+      i {
+        color: #0066cc;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    .filter-tab {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 999px;
+      padding: 0.4rem 1.1rem;
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #515154;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        color: #1d1d1f;
+      }
+
+      &.active {
+        background-color: #1d1d1f;
+        color: #ffffff;
+        border-color: #1d1d1f;
+        font-weight: 600;
+      }
+
+      &:active {
+        transform: scale(0.96);
+      }
+    }
+  }
+}
+
+/* ---------------- GALLERY GRID ---------------- */
+.gallery-container {
+  width: min(92vw, 1200px);
+  margin: 0 auto 5rem;
+  padding: 0 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------------- APPLE STORE UTILITY CARD ---------------- */
+.gallery-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px; /* {rounded.lg} */
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.22s ease,
+              box-shadow 0.22s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 102, 204, 0.3);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .card-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    .card-category {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0066cc;
+      background-color: rgba(0, 102, 204, 0.07);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .card-role {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #6e6e73;
+    }
+  }
+
+  .card-title {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .card-tagline {
+    font-family: var(--font-prompt), sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #0066cc;
+    margin: 0;
+  }
+
+  .card-description {
+    font-family: var(--font-prompt), sans-serif;
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: #424245;
+    margin: 0.4rem 0 0.85rem;
+  }
+
+  .card-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+
+    li {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.86rem;
+      color: #515154;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      line-height: 1.45;
+
+      i {
+        font-size: 0.72rem;
+        color: #0071e3;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .card-tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.4rem;
+
+    .tech-pill {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.76rem;
+      font-weight: 500;
+      background-color: #f5f5f7;
+      color: #333336;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+    }
+  }
+
+  .card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: auto;
+
+    .btn-card-primary {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background-color: #0071e3;
+      color: #ffffff;
+      padding: 0.5rem 1.15rem;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+
+      i {
+        font-size: 0.75rem;
+        transition: transform 0.18s ease;
+      }
+
+      &:hover {
+        background-color: #0077ed;
+
+        i {
+          transform: translateX(2px);
+        }
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    .btn-toggle-spec {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: transparent;
+      color: #0066cc;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.5rem 0.6rem;
+      border-radius: 8px;
+      transition: background-color 0.15s ease;
+
+      i {
+        font-size: 0.72rem;
+        transition: transform 0.2s ease;
+      }
+
+      &.open i {
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        background-color: rgba(0, 102, 204, 0.08);
+      }
+    }
+  }
+
+  /* Expandable Technical Specification Drawer */
+  .card-spec-drawer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.25s ease forwards;
+
+    .spec-drawer-heading {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #1d1d1f;
+      margin-bottom: 0.5rem;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      background-color: #fafafc;
+      padding: 0.85rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+
+      .spec-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.5rem;
+        font-family: var(--font-prompt), sans-serif;
+        font-size: 0.82rem;
+
+        .spec-key {
+          color: #6e6e73;
+          font-weight: 500;
+        }
+
+        .spec-val {
+          color: #1d1d1f;
+          font-weight: 600;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- BOTTOM CALL-TO-ACTION RIBBON ---------------- */
+.gallery-ending-ribbon {
+  background-color: #161617;
+  color: #f5f5f7;
+  padding: 5rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+
+  .ribbon-inner {
+    max-width: 720px;
+    margin: 0 auto;
+
+    .ribbon-eyebrow {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #2997ff;
+      margin-bottom: 0.65rem;
+      display: inline-block;
+    }
+
+    h3 {
+      font-family: var(--font-montserrat), sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.85rem;
+      color: #f5f5f7;
+    }
+
+    p {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: clamp(0.98rem, 1.5vw, 1.15rem);
+      color: #a1a1a6;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .ribbon-ctas {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      a {
+        font-family: var(--font-prompt), sans-serif;
+        font-size: 0.92rem;
+        font-weight: 600;
+        padding: 0.7rem 1.5rem;
+        border-radius: 999px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      .btn-primary {
+        background-color: #0071e3;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #0077ed;
+        }
+
+        i {
+          font-size: 0.8rem;
+        }
+      }
+
+      .btn-secondary {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #f5f5f7;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.14);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- RESPONSIVE BREAKPOINTS ---------------- */
+@media (max-width: 860px) {
+  .gallery-subnav {
+    top: 60px;
+
+    .subnav-inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.65rem;
+      padding: 0.6rem 0.75rem;
+
+      .back-link {
+        align-self: flex-start;
+      }
+
+      .discipline-switcher {
+        overflow-x: auto;
+        padding-bottom: 0.25rem;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+
+        .switcher-pill {
+          flex-shrink: 0;
+          font-size: 0.76rem;
+          padding: 0.3rem 0.75rem;
+        }
+      }
+    }
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .apple-gallery-page {
+    padding-top: 65px;
+  }
+
+  .gallery-hero {
+    margin: 2rem auto 2rem;
+
+    .hero-title {
+      font-size: 1.95rem;
+    }
+
+    .hero-lead {
+      font-size: 0.98rem;
+    }
+  }
+
+  .gallery-card {
+    padding: 1.25rem;
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-actions {
+      flex-direction: column;
+      align-items: stretch;
+
+      .btn-card-primary {
+        justify-content: center;
+      }
+
+      .btn-toggle-spec {
+        justify-content: center;
+      }
+    }
+  }
+
+  .gallery-ending-ribbon {
+    padding: 3.5rem 1rem;
+
+    .ribbon-ctas {
+      flex-direction: column;
+
+      a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

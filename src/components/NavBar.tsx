@@ -7,8 +7,8 @@ import { useState } from "react";
 
 export function NavBar() {
   const currentPath = usePathname();
-  const [OpenMenu, setMenu] = useState<boolean>(false);
-  const NavList = [
+  const [openMenu, setMenu] = useState<boolean>(false);
+  const navList = [
     {
       name: "Work",
       path: "/pages/works",
@@ -25,38 +25,51 @@ export function NavBar() {
 
   return (
     <>
-      <div className="navbar">
+      <nav className="navbar" aria-label="Main Navigation">
         <div className="mainpage">
-          <Link className="marchtanu" href="/"> MarchTanu </Link>
+          <Link className="marchtanu" href="/">
+            MarchTanu
+          </Link>
         </div>
-        <div className="menu" onBlur={() => setMenu(false)} onClick={() => setMenu(!OpenMenu)}>
-          <div className="marchtanu">MarchTanu</div>
-          <i className="bi bi-caret-down-fill"></i>
-        </div>
-        <div className={"nav_dropdown_" + OpenMenu}>
-          {NavList.map((item, index) => (
+
+        <button
+          type="button"
+          className="menu"
+          aria-expanded={openMenu}
+          onClick={() => setMenu(!openMenu)}
+        >
+          <span className="marchtanu">MarchTanu</span>
+          <i className={`bi ${openMenu ? "bi-caret-up-fill" : "bi-caret-down-fill"}`}></i>
+        </button>
+
+        <div className={`nav_dropdown_${openMenu}`}>
+          {navList.map((item, index) => (
             <Link
               key={index}
-              href={`${item["path"]}`}
-              className={item["path"] === currentPath ? "items active" : "items"}
+              href={item.path}
+              onClick={() => setMenu(false)}
+              className={item.path === currentPath ? "items active" : "items"}
             >
-              {item["name"]}
+              {item.name}
             </Link>
           ))}
         </div>
+
         <div className="navlist">
-          {NavList.map((item, index) => (
+          {navList.map((item, index) => (
             <Link
               key={index}
-              href={`${item["path"]}`}
-              className={item["path"] === currentPath ? "items active" : "items"}
+              href={item.path}
+              className={item.path === currentPath ? "items active" : "items"}
             >
-              {item["name"]}
+              {item.name}
             </Link>
           ))}
         </div>
-      </div>
-      {OpenMenu ? <div className="nav_dropdown_bg" onClick={() => setMenu(false)} /> : ''}
+      </nav>
+      {openMenu && <div className="nav_dropdown_bg" onClick={() => setMenu(false)} />}
     </>
   );
 }
+
+export default NavBar;

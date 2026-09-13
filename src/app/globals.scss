@@ -1,47 +1,58 @@
-// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+:root {
+  --color-bg: #ffefe1;
+  --color-surface: #ffffff;
+  --color-primary: #1d1d1f;
+  --color-accent: #0074d4;
+  --color-accent-hover: #005bb0;
+  --color-text-muted: #555555;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
 
 .layout {
-  display: grid;
-  grid-template-rows: 13.75vh auto;
-  background-color: #ffefe1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg);
 }
 
-h1{
-  font-size: clamp(1.5rem,2vw,2rem);
-  font-family: var(--font-montserrat), serif;
-  text-align: center;
-  span{
-    font-weight: 400;
-    font-size: clamp(1rem,2vw,1.5rem);
-  }
+.content-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.email i:hover {
-  color: #0074d4;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), sans-serif;
+  color: var(--color-primary);
 }
 
-.ig i:hover {
-  color: #e4405f; 
+p, span, li, button, select, input, textarea, a {
+  font-family: var(--font-prompt), var(--font-ibm-plex-sans-thai), sans-serif;
 }
 
-.line i:hover {
-  color: #00c300; 
-}
-
-.discord i:hover {
-  color: #7289da; 
-}
-
-.gitlab i:hover {
-  color: #fc6d26; 
-}
-
-.github i:hover {
-  color: #333;
-}
-
-.linkedin i:hover {
-  color: #0077b5;
-}
+/* Hover transitions for social icons */
+.email i { transition: var(--transition-smooth); &:hover { color: #0074d4; } }
+.ig i { transition: var(--transition-smooth); &:hover { color: #e4405f; } }
+.line i { transition: var(--transition-smooth); &:hover { color: #00c300; } }
+.discord i { transition: var(--transition-smooth); &:hover { color: #7289da; } }
+.gitlab i { transition: var(--transition-smooth); &:hover { color: #fc6d26; } }
+.github i { transition: var(--transition-smooth); &:hover { color: #333333; } }
+.linkedin i { transition: var(--transition-smooth); &:hover { color: #0077b5; } }

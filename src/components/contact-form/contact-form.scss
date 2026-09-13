@@ -1,56 +1,156 @@
 .contact-container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: var(--radius-card, 16px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  box-sizing: border-box;
+  min-width: 0;
 
-  form {
-    display: flex;
-    flex-direction: column;
+  .contact-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
 
+    h2 {
+      font-size: clamp(1.45rem, 3.5vw, 1.85rem);
+      font-weight: 800;
+      color: var(--color-primary, #1d1d1f);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
 
-    input,select,
-    textarea {
+    p {
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      color: var(--color-text-muted, #555);
       font-family: var(--font-prompt), sans-serif;
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      &:focus {
-        border-color: #D9D9D9;
-        outline:#D9D9D9;
-        box-shadow: 0 0 4px #ccc;
-      }
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: none;
-    }
-
-    button {
-      background: #000000;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-
-      &:hover {
-        background: #282828;
-      }
     }
   }
 
-  .status {
-    margin-top: 10px;
-    color: green;
-    font-weight: bold;
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+
+      label {
+        font-family: var(--font-prompt), sans-serif;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--color-primary, #1d1d1f);
+      }
+
+      input,
+      select,
+      textarea {
+        font-family: var(--font-prompt), sans-serif;
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        border-radius: 8px;
+        color: var(--color-primary, #1d1d1f);
+        background-color: #fafafc;
+        transition: all 0.2s ease;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+          background-color: #ffffff;
+          border-color: var(--color-accent, #0074d4);
+          box-shadow: 0 0 0 3px rgba(0, 116, 212, 0.15);
+        }
+
+        &::placeholder {
+          color: #8e8e93;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      select {
+        cursor: pointer;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    .status-banner {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-family: var(--font-prompt), sans-serif;
+      font-weight: 500;
+      line-height: 1.4;
+
+      &.sent {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #c8e6c9;
+      }
+
+      &.error {
+        background-color: #ffebee;
+        color: #c62828;
+        border: 1px solid #ffcdd2;
+      }
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.85rem 1.5rem;
+      background-color: var(--color-primary, #1d1d1f);
+      color: #ffffff;
+      font-family: var(--font-prompt), sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+
+      &:hover:not(:disabled) {
+        background-color: #0071e3;
+        transform: scale(0.99);
+      }
+
+      &:disabled {
+        background-color: #a1a1a6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
   }
 }

@@ -1,67 +1,219 @@
-.workpage-background {
-  position: fixed;
-  top: 0;
-  left: 0;
+html {
+  scroll-behavior: smooth;
+}
+
+.apple-works-page {
   width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  z-index: -1;
+  padding-top: 80px;
+  background-color: #161617;
+  overflow-x: hidden;
 }
-.workpage-layout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.work-display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 75vh;
+
+/* =========================================================
+   APPLE FROSTED SUB-NAVIGATION
+   ========================================================= */
+.apple-subnav {
+  position: sticky;
+  top: 76px;
+  z-index: 90;
   width: 100%;
-  margin: 2rem 0;
-  background-color: black;
-  animation: autoFade linear both;
-  animation-timeline: view();
+  background-color: rgba(22, 22, 23, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
 
+  .subnav-inner {
+    width: min(92vw, 1120px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+
+    .subnav-title {
+      font-family: var(--font-montserrat), sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #f5f5f7;
+      letter-spacing: -0.2px;
+    }
+
+    .subnav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+
+      a {
+        font-family: var(--font-prompt), sans-serif;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #a1a1a6;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #2997ff;
+        }
+      }
+    }
+  }
 }
 
-.autoshow{
-  animation: autoShow both;
-  animation-timeline: view(70%, 5%);
-}
-@keyframes autoFade {
-  0% {
-    color: black;
-    background-color: transparent;
+/* =========================================================
+   APPLE ENDING CALL-TO-ACTION RIBBON
+   ========================================================= */
+.apple-ending-ribbon {
+  background-color: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6rem 1.5rem;
+  text-align: center;
+  color: #f5f5f7;
+
+  .ribbon-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-family: var(--font-montserrat), sans-serif;
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #f5f5f7;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+
+    p {
+      font-family: var(--font-prompt), sans-serif;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      color: #86868b;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .ribbon-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      a {
+        font-family: var(--font-prompt), sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        padding: 0.75rem 1.6rem;
+        border-radius: 999px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      .ribbon-btn-primary {
+        background-color: #0071e3;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #0077ed;
+        }
+
+        i {
+          font-size: 0.8rem;
+          transition: transform 0.2s ease;
+        }
+
+        &:hover i {
+          transform: translateX(3px);
+        }
+      }
+
+      .ribbon-btn-secondary {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #f5f5f7;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.14);
+        }
+      }
+    }
   }
-  20% {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .apple-subnav {
+    top: 60px;
+
+    .subnav-inner {
+      padding: 0.6rem 0.75rem;
+
+      .subnav-title {
+        font-size: 0.82rem;
+      }
+
+      .subnav-links {
+        gap: 0.85rem;
+
+        a {
+          font-size: 0.78rem;
+        }
+      }
+    }
   }
 
-  45%,
-  50% {
-    background-color: black;
-    color: rgb(255, 255, 255);
-  }
-  75% {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-  }
-  100% {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
+  .apple-ending-ribbon {
+    padding: 4rem 1rem;
+
+    .ribbon-ctas a {
+      font-size: 0.88rem;
+      padding: 0.65rem 1.25rem;
+    }
   }
 }
-@keyframes autoShow {
-  from {
-    opacity: 0;
-    transform: translateY(200px) scale(0.3);
+
+@media (max-width: 520px) {
+  .apple-subnav .subnav-inner {
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+
+    .subnav-title {
+      font-size: 0.76rem;
+      opacity: 0.8;
+    }
+
+    .subnav-links {
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      a {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.4rem;
+      }
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+
+  .apple-ending-ribbon {
+    .ribbon-ctas {
+      flex-direction: column;
+      width: 100%;
+
+      a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
   }
-  
 }
+

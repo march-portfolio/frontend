@@ -1,0 +1,346 @@
+/* =========================================================
+   APPLE SPEC ABOUT PAGE
+   Ref: Apple.md (Parchment canvas, SF Pro, 17px body, 18px radius)
+   ========================================================= */
+
+.about-page {
+  width: min(92vw, 860px);
+  margin: 0 auto;
+  padding: 100px 1rem 90px;
+  box-sizing: border-box;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+
+  .about-title {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", var(--font-montserrat), sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-weight: 600; /* Apple headline weight */
+    letter-spacing: -0.03em; /* Apple tight tracking */
+    color: #1d1d1f; /* {colors.ink} */
+    margin: 0 0 0.5rem;
+    line-height: 1.1;
+  }
+
+  .about-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", var(--font-prompt), sans-serif;
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    font-weight: 400;
+    color: #6e6e73; /* {colors.ink-muted-48} */
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   APPLE SPEC-SHEET KEY-VALUE GRID (About Me)
+   ========================================================= */
+.apple-spec-grid {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .spec-label {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6e6e73;
+    letter-spacing: -0.01em;
+  }
+
+  .spec-value {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
+    text-align: right;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Apple Configurator Option Chips */
+.apple-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.apple-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 6px 14px;
+  border-radius: 9999px; /* {rounded.pill} */
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d1d1f;
+  letter-spacing: -0.01em;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  i {
+    font-size: 0.85rem;
+    color: #0066cc; /* {colors.primary} Action Blue */
+  }
+
+  &.highlight {
+    border-color: rgba(0, 102, 204, 0.35);
+    background-color: rgba(0, 102, 204, 0.04);
+    color: #0066cc;
+  }
+}
+
+/* Apple Editorial Block */
+.apple-editorial-block {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+  .block-label {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: #1d1d1f;
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    line-height: 1.47;
+    color: #333336;
+    margin: 0.35rem 0 0.75rem;
+  }
+}
+
+/* Apple Action Pill CTAs */
+.apple-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.apple-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 8px 18px;
+  border-radius: 9999px; /* {rounded.pill} */
+  background-color: #0066cc; /* {colors.primary} Action Blue */
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease;
+
+  &:active {
+    transform: scale(0.95); /* Apple system-wide active-press */
+  }
+
+  &:hover {
+    background-color: #0071e3; /* {colors.primary-focus} */
+  }
+
+  i {
+    font-size: 0.9rem;
+  }
+}
+
+.apple-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 8px 18px;
+  border-radius: 9999px; /* {rounded.pill} */
+  background-color: transparent;
+  color: #0066cc; /* {colors.primary} Action Blue */
+  border: 1px solid #0066cc;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:hover {
+    background-color: rgba(0, 102, 204, 0.06);
+  }
+
+  i {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================================
+   APPLE TIMELINE & VENTURES MILESTONES
+   ========================================================= */
+.apple-milestone {
+  padding-bottom: 1.35rem;
+  margin-bottom: 1.35rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .milestone-title {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+    margin: 0 0 0.25rem;
+  }
+
+  .milestone-meta {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 14px;
+    color: #6e6e73;
+    margin: 0 0 0.5rem;
+  }
+
+  .milestone-desc {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    line-height: 1.47;
+    color: #333336;
+    margin: 0.4rem 0 0;
+  }
+}
+
+/* =========================================================
+   APPLE ACCESSORY GRID (Technical Stack)
+   ========================================================= */
+.apple-utility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.apple-utility-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08); /* {colors.hairline} */
+  border-radius: 14px;
+  padding: 1.15rem;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.16);
+  }
+
+  h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #1d1d1f;
+    margin: 0 0 0.35rem;
+  }
+
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #6e6e73;
+    margin: 0;
+  }
+}
+
+/* =========================================================
+   APPLE EDITORIAL QUOTE
+   ========================================================= */
+.apple-quote-block {
+  margin: 1.5rem 0 0.5rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 2px solid #0066cc; /* {colors.primary} */
+
+  blockquote {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.015em;
+    color: #1d1d1f;
+    line-height: 1.45;
+  }
+}
+
+/* Apple text link */
+.apple-link {
+  color: #0066cc; /* Action Blue */
+  text-decoration: none;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: color 0.15s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 580px) {
+  .about-page {
+    padding-top: 85px;
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .spec-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+
+    .spec-value {
+      text-align: left;
+    }
+  }
+
+  .apple-utility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apple-action-row {
+    flex-direction: column;
+
+    .apple-btn-pill,
+    .apple-btn-ghost {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
