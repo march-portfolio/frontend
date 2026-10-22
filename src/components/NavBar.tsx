@@ -28,7 +28,7 @@ export function NavBar() {
       <nav className="navbar" aria-label="Main Navigation">
         <div className="mainpage">
           <Link className="marchtanu" href="/">
-            MarchTanu
+            Marsh Me
           </Link>
         </div>
 
@@ -38,7 +38,7 @@ export function NavBar() {
           aria-expanded={openMenu}
           onClick={() => setMenu(!openMenu)}
         >
-          <span className="marchtanu">MarchTanu</span>
+          <span className="marchtanu">Marsh Me</span>
           <i className={`bi ${openMenu ? "bi-caret-up-fill" : "bi-caret-down-fill"}`}></i>
         </button>
 

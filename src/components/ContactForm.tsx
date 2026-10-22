@@ -44,7 +44,7 @@ export default function ContactForm() {
   return (
     <div className="contact-container">
       <div className="contact-form-header">
-        <h2>Send a Message</h2>
+        <h1>Send a Message</h1>
         <p>Have a project idea, question, or opportunity? Let&apos;s connect.</p>
       </div>
 
@@ -88,12 +88,12 @@ export default function ContactForm() {
               Select a category
             </option>
             <option value="code">Software Engineering &amp; Full-Stack Systems</option>
-            <option value="startup">Startup Venture &amp; Product Architecture (StageLink / Kindee)</option>
+            <option value="startup">Product &amp; project collaboration</option>
             <option value="mc">Master of Ceremonies (MC) &amp; Live Stage Hosting</option>
-            <option value="actor">Acting, Modeling &amp; Casting (Me Mind Y Studio)</option>
+            <option value="actor">Acting &amp; casting (marchtanu)</option>
             <option value="tiktok">TikTok &amp; Digital Content Creation (@marchtanu)</option>
             <option value="university">Mahidol University / Academic Inquiries</option>
-            <option value="gym">Athletic Fitness &amp; Health Science</option>
+            <option value="gym">Creative collaboration</option>
             <option value="other">Other Collaboration / General Inquiry</option>
           </select>
         </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useId, useState } from "react";
 import "./dropdown.scss";
 
 type DropdownProps = {
@@ -9,6 +9,7 @@ type DropdownProps = {
 };
 
 export function Dropdown({ children, label, defaultOpen = false }: DropdownProps) {
+  const detailsId = useId();
   const [isOpen, setOpen] = useState(defaultOpen);
 
   return (
@@ -19,6 +20,7 @@ export function Dropdown({ children, label, defaultOpen = false }: DropdownProps
         role="button"
         tabIndex={0}
         aria-expanded={isOpen}
+        aria-controls={detailsId}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
@@ -31,7 +33,7 @@ export function Dropdown({ children, label, defaultOpen = false }: DropdownProps
           <i className="bi bi-chevron-right"></i>
         </div>
       </div>
-      {isOpen && <div className="DropdownDetails">{children}</div>}
+      <div id={detailsId} hidden={!isOpen} className="DropdownDetails">{children}</div>
     </div>
   );
 }

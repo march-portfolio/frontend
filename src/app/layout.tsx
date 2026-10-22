@@ -2,6 +2,7 @@ import { NavBar } from "@/components/NavBar";
 import "./globals.scss";
 import { Montserrat, Prompt, IBM_Plex_Sans_Thai } from "next/font/google";
 import type { Metadata } from "next";
+import { pageMetadata, siteOrigin, siteName } from "@/lib/seo";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,8 +23,19 @@ const ibmPlexSansThai = IBM_Plex_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  title: "Tanuphat Sojindamanee (March) | Portfolio",
-  description: "Multidisciplinary portfolio of Tanuphat Sojindamanee (March) - Software Engineer, Startup Founder, Actor, and Stage Host.",
+  ...pageMetadata("/"),
+  metadataBase: new URL(siteOrigin),
+  applicationName: siteName,
+  authors: [{ name: "Tanuphat Sojindamanee", url: siteOrigin }],
+  robots: { index: true, follow: true }
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": siteOrigin + "/#website", url: siteOrigin, name: siteName, publisher: { "@id": siteOrigin + "/#person" } },
+    { "@type": "Person", "@id": siteOrigin + "/#person", name: "Tanuphat Sojindamanee", alternateName: ["March", "Marsh Me", "marchtanu"], url: siteOrigin, image: siteOrigin + "/profile.jpg", jobTitle: "Software developer", sameAs: ["https://github.com/marchtanu"] }
+  ]
 };
 
 export default function RootLayout({
@@ -34,6 +46,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${prompt.variable} ${ibmPlexSansThai.variable}`}>
       <body className="layout">
+        <a className="skip-link" href="#main-content">Skip to main content</a>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\u003c") }} />
         <header><NavBar /></header>
         <div className="content-root">{children}</div>
       </body>

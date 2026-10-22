@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={page.pageWrapper}>
+    <main id="main-content" tabIndex={-1} className={page.pageWrapper}>
       <div className={page.container}>
         <div className={page.profileCol}>
           <Image
@@ -20,20 +20,20 @@ export default function Home() {
 
         <div className={page.bioCol}>
           <h1 className={page.title}>Tanuphat Sojindamanee</h1>
-          <p className={page.nickname}>March (MarchTanu)</p>
+          <p className={page.nickname}>March · Marsh Me</p>
 
           <p className={page.description}>
             {" "}
-            Software engineer, founder, actor, and Master of Ceremonies —
-            building at the intersection of technology, business, creativity,
-            and performance.{" "}
+            Software developer working on web applications and AI tools.
+            Marsh Me is my engineering portfolio, bringing together client work
+            and personal software projects.{" "}
           </p>
 
           <p className={page.subDescription}>
             {" "}
-            From architecting full-stack products and AI systems to performing
-            on screen and leading live stages, I turn ideas into things people
-            can actually experience.{" "}
+            My current work includes TTTuniverse, mayclinic and AXEAN Web.
+            I also develop AUHIP, a desktop AI assistant. My acting and
+            creative work uses the separate identity marchtanu.{" "}
           </p>
 
           <div className={page.contact_field}>
@@ -108,8 +108,8 @@ export default function Home() {
           </div>
 
           <div className={page.actionRow}>
-            <Link className={page.visit_button} href="/pages/works">
-              Explore Works <i className="bi bi-arrow-right"></i>
+            <Link className={page.visit_button} href="/software">
+              Explore Engineering <i className="bi bi-arrow-right"></i>
             </Link>
             <Link className={page.secondary_button} href="/pages/about">
               About Me

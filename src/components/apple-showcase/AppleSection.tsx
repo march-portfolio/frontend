@@ -19,7 +19,7 @@ interface AppleSectionProps {
   specs?: string[];
   primaryCta?: CtaLink;
   secondaryCta?: CtaLink;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export function AppleSection({
@@ -34,7 +34,7 @@ export function AppleSection({
   children,
 }: AppleSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(true);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -112,9 +112,7 @@ export function AppleSection({
         </div>
 
         {/* Centerpiece Visual Mockup */}
-        <div className="mockup-frame">
-          {children}
-        </div>
+        {children && <div className="mockup-frame">{children}</div>}
 
         {/* Bottom Spec Pills */}
         {specs.length > 0 && (

@@ -56,3 +56,12 @@ p, span, li, button, select, input, textarea, a {
 .gitlab i { transition: var(--transition-smooth); &:hover { color: #fc6d26; } }
 .github i { transition: var(--transition-smooth); &:hover { color: #333333; } }
 .linkedin i { transition: var(--transition-smooth); &:hover { color: #0077b5; } }
+/* Keyboard access without changing the existing visual system. */
+.skip-link { position: fixed; top: 8px; left: 16px; z-index: 1000; padding: 12px 18px; background: #fff; color: #1d1d1f; transform: translateY(-150%); }
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid #0074d4; outline-offset: 4px; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

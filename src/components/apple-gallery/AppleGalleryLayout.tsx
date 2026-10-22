@@ -88,11 +88,11 @@ export default function AppleGalleryLayout({
         )}
 
         {filterCategories.length > 0 && (
-          <div className="filter-tabs" role="tablist">
+          <div className="filter-tabs" role="group" aria-label="Filter projects">
             <button
               type="button"
-              role="tab"
-              aria-selected={selectedCategory === "All"}
+
+              aria-pressed={selectedCategory === "All"}
               className={`filter-tab ${selectedCategory === "All" ? "active" : ""}`}
               onClick={() => handleCategoryClick("All")}
             >
@@ -102,8 +102,8 @@ export default function AppleGalleryLayout({
               <button
                 key={idx}
                 type="button"
-                role="tab"
-                aria-selected={selectedCategory === cat}
+
+                aria-pressed={selectedCategory === cat}
                 className={`filter-tab ${selectedCategory === cat ? "active" : ""}`}
                 onClick={() => handleCategoryClick(cat)}
               >
@@ -115,7 +115,7 @@ export default function AppleGalleryLayout({
       </header>
 
       {/* Main Gallery Grid */}
-      <main className="gallery-container">
+      <main id="main-content" tabIndex={-1} className="gallery-container">
         <div className="gallery-grid">
           {children}
         </div>
@@ -127,7 +127,7 @@ export default function AppleGalleryLayout({
           <span className="ribbon-eyebrow">Collaboration &amp; Bookings</span>
           <h3>Looking to partner with March?</h3>
           <p>
-            Whether building a high-performance software system, deploying custom AI pipelines, or booking stage hosting and screen talent, let&apos;s create something remarkable.
+            For software development, freelance work, casting or event hosting, share what you have in mind and we can discuss the next step.
           </p>
           <div className="ribbon-ctas">
             <Link href="/pages/contact" className="btn-primary">

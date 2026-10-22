@@ -1,0 +1,197 @@
+{
+  "software": [
+    {
+      "id": "tttuniverse",
+      "title": "TTTuniverse / Tom Yum Week",
+      "category": "Client work",
+      "status": "In progress",
+      "role": "Web developer",
+      "tagline": "Campaign web applications",
+      "description": "Ongoing web development work for TTTuniverse. The Tom Yum Week project uses Astro and Cloudflare Workers for its campaign website.",
+      "bullets": ["Astro application with a Cloudflare deployment adapter.", "Work spans campaign and event-related web applications."],
+      "techPills": ["Astro", "Cloudflare Workers", "JavaScript"],
+      "specs": [{"key": "Stage", "value": "Ongoing professional work"}, {"key": "Scope", "value": "Campaign and event web development"}]
+    },
+    {
+      "id": "mayclinic",
+      "title": "mayclinic",
+      "category": "Client work",
+      "status": "In progress",
+      "role": "Web developer",
+      "tagline": "Bilingual clinic web application",
+      "description": "Ongoing development of a clinic web application using Next.js, next-intl and MySQL. The project includes Thai and English interfaces and document storage integration.",
+      "bullets": ["Next.js application with next-intl language routing.", "MySQL data access and AWS S3 integration are present in the project."],
+      "techPills": ["Next.js", "TypeScript", "next-intl", "MySQL", "AWS S3"],
+      "specs": [{"key": "Stage", "value": "In progress"}, {"key": "Languages", "value": "Thai and English"}]
+    },
+    {
+      "id": "axean-festival",
+      "title": "AXEAN Festival / Fungjai",
+      "category": "Client work",
+      "status": "Ongoing internship work",
+      "role": "Web development intern",
+      "tagline": "Festival profiles and web administration",
+      "description": "Festival web development for AXEAN, covering artist, delegate and organisation profiles. The application combines a Nuxt/Vue interface with a Go backend.",
+      "bullets": ["Nuxt 3, Vue, Vuetify and Pinia on the frontend.", "Go API using Gin, GORM and PostgreSQL."],
+      "techPills": ["Nuxt", "Vue", "Go", "Gin", "PostgreSQL", "Docker"],
+      "specs": [{"key": "Frontend", "value": "Nuxt 3 / Vue"}, {"key": "Backend", "value": "Go / Gin / GORM"}]
+    },
+    {
+      "id": "auhip",
+      "title": "AUHIP",
+      "category": "Personal tools",
+      "status": "In development",
+      "role": "Personal project developer",
+      "tagline": "Desktop AI assistant and Second Brain foundation",
+      "description": "A Python desktop assistant with a PyQt6 interface, speech input, local Ollama routing and optional Gemini integration. Current local development also explores source-linked memory and workspace tools.",
+      "bullets": ["Voice and optional camera/gesture interfaces coordinated through an async event system.", "Configurable speech and model engines support local workflows and optional cloud services."],
+      "techPills": ["Python", "PyQt6", "qasync", "Ollama", "Vosk", "Gemini"],
+      "primaryLink": {"label": "AUHIP source on GitHub", "href": "https://github.com/marchtanu/auhip", "external": true},
+      "specs": [{"key": "Runtime", "value": "Windows desktop application"}, {"key": "Stage", "value": "Active development; experimental daemon/client split"}]
+    },
+    {
+      "id": "openmeitu",
+      "title": "OpenMeitu",
+      "category": "Personal tools",
+      "status": "Local development",
+      "role": "Personal project developer",
+      "tagline": "Browser-based photo editing",
+      "description": "A local photo editor with deterministic adjustments, style previews, before/after comparison, undo/redo, recipe saving and image export. Reference-based portrait refinement is still being developed.",
+      "bullets": ["JPEG and PNG workflows preserve the original while edits are adjusted.", "Manual portrait regions support conservative local edits; automatic face segmentation is not implemented."],
+      "techPills": ["JavaScript", "Browser image processing", "Node.js"],
+      "specs": [{"key": "Stage", "value": "Local development; no public release or adopted open-source license yet"}, {"key": "Validation", "value": "Reference refinement is ongoing; exact Meitu matching is not claimed"}]
+    },
+    {
+      "id": "kinesisos",
+      "title": "KinesisOS",
+      "category": "Personal tools",
+      "status": "Local prototype",
+      "role": "Personal project developer",
+      "tagline": "Gesture-driven desktop interaction",
+      "description": "A Python prototype for hand tracking, cursor input and a desktop overlay. The local implementation uses MediaPipe, PyQt6, an adaptive One Euro filter and Windows input calls.",
+      "bullets": ["Hand tracking and adaptive filtering feed the gesture and cursor-input pipeline.", "A PyQt6 overlay presents the desktop interface."],
+      "techPills": ["Python", "MediaPipe", "PyQt6", "Windows API"],
+      "specs": [{"key": "Stage", "value": "Local prototype"}]
+    },
+    {
+      "id": "openfeder",
+      "title": "OpenFeder",
+      "category": "Personal tools",
+      "status": "Local prototype",
+      "role": "Personal project developer",
+      "tagline": "PDF tools with an MCP gateway",
+      "description": "A PDF-processing prototype combining a Python engine and a TypeScript Model Context Protocol gateway. Modules cover document inspection, annotation, form filling and vector-stroke writing.",
+      "bullets": ["Python engine uses PyMuPDF, FastAPI, Pillow and ReportLab.", "TypeScript gateway exposes document tools through the MCP SDK."],
+      "techPills": ["Python", "TypeScript", "MCP", "PyMuPDF", "FastAPI"],
+      "specs": [{"key": "Stage", "value": "Local prototype"}]
+    },
+    {
+      "id": "singing-practice",
+      "title": "Singing practice engine",
+      "category": "Personal tools",
+      "status": "Private prototype",
+      "role": "Personal project developer",
+      "tagline": "Melody and pitch practice in the browser",
+      "description": "A browser prototype for importing a song excerpt, estimating its melody and comparing microphone pitch with editable note targets. It includes a piano-roll view and sharp/flat feedback in cents.",
+      "bullets": ["Local song import, melody estimates and live pitch comparison.", "Voice takes can be trimmed, split, pitch-shifted and exported as WAV."],
+      "techPills": ["JavaScript", "Web Audio", "Essentia.js"],
+      "specs": [{"key": "Stage", "value": "Private prototype; generated-example checks completed, real-song and human-voice validation pending"}, {"key": "Scope", "value": "Note and pitch comparison; whole-song key detection is not implemented"}]
+    },
+    {
+      "id": "kindee",
+      "title": "Kindee",
+      "category": "Founder projects",
+      "status": "Concept and demos",
+      "role": "Founder",
+      "tagline": "Nutrition-first health intelligence",
+      "description": "An independent, nutrition-first health technology project focused on making health information easier to understand. Current work centres on evidence-backed content, product research and early web demos.",
+      "bullets": ["Nutrition is the initial focus within a broader whole-body health vision.", "Food scanning, wearable integrations and personalised guidance remain ideas to validate, rather than shipped capabilities."],
+      "techPills": ["Product research", "Nutrition education", "Web demos"],
+      "specs": [{"key": "Stage", "value": "Pre-validation; concept and demos"}, {"key": "Brand", "value": "Independent from Marsh Me and marchtanu"}]
+    },
+    {
+      "id": "stagelink",
+      "title": "StageLink",
+      "category": "Earlier work",
+      "status": "Inactive startup",
+      "role": "Co-founder / developer",
+      "tagline": "Performer marketplace and venue tools",
+      "description": "Earlier work on performer and venue software, with separate marketplace and venue applications. StageLink is currently inactive as a startup; its architecture remains part of my engineering history.",
+      "bullets": ["The venue application uses Next.js, React and PostgreSQL.", "Separate marketplace and venue applications explore different parts of live entertainment work."],
+      "techPills": ["Next.js", "React", "PostgreSQL"],
+      "specs": [{"key": "Stage", "value": "Inactive as a startup"}]
+    },
+    {
+      "id": "blackbox",
+      "title": "Blackbox",
+      "category": "Audio systems",
+      "status": "Development project",
+      "role": "Software development",
+      "tagline": "Audio recognition and review tooling",
+      "description": "Audio recognition and review software combining a Next.js dashboard, PostgreSQL storage and a Python capture agent. Recognition adapters and evidence-handling modules support audio analysis and review.",
+      "bullets": ["Source includes recognition orchestration, evidence handling and audio review tools.", "A Raspberry Pi capture architecture is documented as a hardware prototype."],
+      "techPills": ["Next.js", "Python", "PostgreSQL", "Audio processing"],
+      "specs": [{"key": "Stage", "value": "Development project with a documented hardware prototype; venue deployment and recognition performance need separate validation"}]
+    },
+    {
+      "id": "betterliving",
+      "title": "betterLiving",
+      "category": "Earlier work",
+      "status": "Earlier project",
+      "role": "Web development",
+      "tagline": "Real estate web application",
+      "description": "Earlier real estate web development work, with a web application, a Fastify backend and database definitions.",
+      "bullets": ["TypeScript and Fastify support the backend application."],
+      "techPills": ["TypeScript", "Fastify", "Web development"]
+    },
+    {
+      "id": "retail-software",
+      "title": "B-Smart / Beautie Point",
+      "category": "Earlier work",
+      "status": "Earlier project",
+      "role": "Software development",
+      "tagline": "Retail and business software",
+      "description": "Earlier retail and business software development, including a Ruby on Rails and PostgreSQL backend for Beautie Point.",
+      "bullets": ["Ruby on Rails application with a PostgreSQL data layer."],
+      "techPills": ["Ruby on Rails", "PostgreSQL"]
+    }
+  ],
+  "acting": [
+    {
+      "id": "marchtanu-acting",
+      "title": "Acting / marchtanu",
+      "category": "Acting",
+      "status": "Active career",
+      "role": "Actor",
+      "tagline": "Screen performance and creative work",
+      "description": "My artist identity is marchtanu. Acting and performance are a separate part of my professional work, alongside the engineering portfolio presented as Marsh Me.",
+      "bullets": ["Acting is an active professional commitment.", "Contact me to discuss a specific role, production or casting opportunity."],
+      "techPills": ["Acting", "Screen performance"],
+      "primaryLink": {"label": "Discuss a casting opportunity", "href": "/pages/contact"}
+    },
+    {
+      "id": "marchtanu-content",
+      "title": "Creative content / marchtanu",
+      "category": "Creative content",
+      "role": "Creator",
+      "tagline": "Artist presentation and creative process",
+      "description": "marchtanu is the identity for my artist presence and creative content. Technology can support that work, while detailed engineering projects belong in the Marsh Me portfolio.",
+      "bullets": [],
+      "techPills": ["Creative content", "Artist identity"],
+      "primaryLink": {"label": "Contact March", "href": "/pages/contact"}
+    }
+  ],
+  "hosting": [
+    {
+      "id": "stage-hosting",
+      "title": "MC & stage hosting",
+      "category": "Hosting",
+      "role": "Master of ceremonies",
+      "tagline": "Event and hosting inquiries",
+      "description": "Contact me about hosting, presenting or moderating an event. Share the event format, language, date and location so we can discuss the role and confirm availability.",
+      "bullets": ["Thai and English event inquiries are welcome.", "The event brief and availability are agreed individually."],
+      "techPills": ["Event hosting", "Thai", "English"],
+      "primaryLink": {"label": "Discuss an event", "href": "/pages/contact"}
+    }
+  ]
+}

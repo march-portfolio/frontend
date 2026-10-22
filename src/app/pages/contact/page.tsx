@@ -1,9 +1,13 @@
 import ContactForm from "@/components/ContactForm";
 import "./contact.scss";
 
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata("/pages/contact");
+
 export default function ContactPage() {
   return (
-    <div className="contact-page-wrapper">
+    <main id="main-content" tabIndex={-1} className="contact-page-wrapper">
       <ContactForm />
 
       <div className="connect-section">
@@ -79,6 +83,6 @@ export default function ContactPage() {
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
