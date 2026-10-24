@@ -20,12 +20,12 @@ export default function Home() {
 
         <div className={page.bioCol}>
           <h1 className={page.title}>Tanuphat Sojindamanee</h1>
-          <p className={page.nickname}>March · Marsh Me</p>
+          <p className={page.nickname}>March (MarchTanu)</p>
 
           <p className={page.description}>
             {" "}
             Software developer working on web applications and AI tools.
-            Marsh Me is my engineering portfolio, bringing together client work
+            This portfolio brings together my client work
             and personal software projects.{" "}
           </p>
 
@@ -33,7 +33,7 @@ export default function Home() {
             {" "}
             My current work includes TTTuniverse, mayclinic and AXEAN Web.
             I also develop AUHIP, a desktop AI assistant. My acting and
-            creative work uses the separate identity marchtanu.{" "}
+            creative work is also part of MarchTanu.{" "}
           </p>
 
           <div className={page.contact_field}>

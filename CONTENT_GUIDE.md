@@ -1,6 +1,6 @@
 # Portfolio content maintenance
 
-Reviewed 22 October 2026. This is an existing portfolio; preserve its core design.
+Identity corrected 25 October 2026; project content reviewed 22 October 2026. This is an existing portfolio; preserve its core design.
 
 - Public project data: src/data/portfolio.json. Shared by gallery, About and legacy project components.
 - SEO route facts: src/lib/seo.ts. Public sitemap derives from this route list.
@@ -8,7 +8,7 @@ Reviewed 22 October 2026. This is an existing portfolio; preserve its core desig
 - Current personal context: Private March workspace: WORKSPACE_CONTEXT.md.
 - Root information.md and project_context.md contain historical generated assertions. They are not independent sources.
 
-Use exact name Tanuphat Sojindamanee, nickname March, engineering identity Marsh Me and artist identity marchtanu. Kindee is independent. Confirm future changes against actual project files or user direction.
+Use full name Tanuphat Sojindamanee and public name March (MarchTanu) across engineering, acting and creative work. Do not introduce a separate engineering alias. Kindee is independent. Confirm future changes against actual project files or user direction.
 
 Describe the role, implementation and stage separately. A dependency, file, test fixture, plan or synthetic result does not establish production use, measured performance, sole ownership, a public release or a client outcome. Only link a project source repository after confirming public visibility; never label a GitHub profile as the repository.
 

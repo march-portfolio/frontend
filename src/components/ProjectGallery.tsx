@@ -19,7 +19,7 @@ export default function ProjectGallery({ discipline, title, lead, projects }: Pr
   return (
     <AppleGalleryLayout
       currentDiscipline={discipline}
-      eyebrow={discipline === "software" || discipline === "ai-systems" ? "Marsh Me" : "marchtanu"}
+      eyebrow={"March (MarchTanu)"}
       title={title}
       lead={lead}
       filterCategories={categories.length > 1 ? categories : []}

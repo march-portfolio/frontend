@@ -34,7 +34,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     { "@type": "WebSite", "@id": siteOrigin + "/#website", url: siteOrigin, name: siteName, publisher: { "@id": siteOrigin + "/#person" } },
-    { "@type": "Person", "@id": siteOrigin + "/#person", name: "Tanuphat Sojindamanee", alternateName: ["March", "Marsh Me", "marchtanu"], url: siteOrigin, image: siteOrigin + "/profile.jpg", jobTitle: "Software developer", sameAs: ["https://github.com/marchtanu"] }
+    { "@type": "Person", "@id": siteOrigin + "/#person", name: "Tanuphat Sojindamanee", alternateName: ["March", "MarchTanu"], url: siteOrigin, image: siteOrigin + "/profile.jpg", jobTitle: "Software developer", sameAs: ["https://github.com/marchtanu"] }
   ]
 };
 

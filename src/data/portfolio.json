@@ -107,7 +107,7 @@
       "description": "An independent, nutrition-first health technology project focused on making health information easier to understand. Current work centres on evidence-backed content, product research and early web demos.",
       "bullets": ["Nutrition is the initial focus within a broader whole-body health vision.", "Food scanning, wearable integrations and personalised guidance remain ideas to validate, rather than shipped capabilities."],
       "techPills": ["Product research", "Nutrition education", "Web demos"],
-      "specs": [{"key": "Stage", "value": "Pre-validation; concept and demos"}, {"key": "Brand", "value": "Independent from Marsh Me and marchtanu"}]
+      "specs": [{"key": "Stage", "value": "Pre-validation; concept and demos"}, {"key": "Brand", "value": "Independent health technology project"}]
     },
     {
       "id": "stagelink",
@@ -159,23 +159,23 @@
   "acting": [
     {
       "id": "marchtanu-acting",
-      "title": "Acting / marchtanu",
+      "title": "Acting / MarchTanu",
       "category": "Acting",
       "status": "Active career",
       "role": "Actor",
       "tagline": "Screen performance and creative work",
-      "description": "My artist identity is marchtanu. Acting and performance are a separate part of my professional work, alongside the engineering portfolio presented as Marsh Me.",
+      "description": "I am March (MarchTanu). Acting and performance are part of my professional work, alongside software development.",
       "bullets": ["Acting is an active professional commitment.", "Contact me to discuss a specific role, production or casting opportunity."],
       "techPills": ["Acting", "Screen performance"],
       "primaryLink": {"label": "Discuss a casting opportunity", "href": "/pages/contact"}
     },
     {
       "id": "marchtanu-content",
-      "title": "Creative content / marchtanu",
+      "title": "Creative content / MarchTanu",
       "category": "Creative content",
       "role": "Creator",
       "tagline": "Artist presentation and creative process",
-      "description": "marchtanu is the identity for my artist presence and creative content. Technology can support that work, while detailed engineering projects belong in the Marsh Me portfolio.",
+      "description": "I share my creative content and artist work as MarchTanu. My interest in technology also supports the tools and processes behind that work.",
       "bullets": [],
       "techPills": ["Creative content", "Artist identity"],
       "primaryLink": {"label": "Contact March", "href": "/pages/contact"}

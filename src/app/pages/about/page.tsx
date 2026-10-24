@@ -16,12 +16,12 @@ export default function AboutPage() {
       <Dropdown label="About me" defaultOpen>
         <div className="apple-spec-grid">
           <div className="spec-row"><span className="spec-label">Name</span><span className="spec-value">Tanuphat Sojindamanee (March)</span></div>
-          <div className="spec-row"><span className="spec-label">Engineering</span><span className="spec-value">Marsh Me</span></div>
-          <div className="spec-row"><span className="spec-label">Artist identity</span><span className="spec-value">marchtanu</span></div>
+          <div className="spec-row"><span className="spec-label">Public name</span><span className="spec-value">March (MarchTanu)</span></div>
+          <div className="spec-row"><span className="spec-label">Work</span><span className="spec-value">Software development &amp; acting</span></div>
           <div className="spec-row"><span className="spec-label">Education</span><span className="spec-value">First-year ICT student, Mahidol University</span></div>
         </div>
         <div className="apple-editorial-block">
-          <p>I work on software and web applications, alongside an active acting career. Marsh Me is my professional home for engineering, freelance development and personal tools. marchtanu is my artist identity.</p>
+          <p>I am March (MarchTanu), Tanuphat Sojindamanee. I work on software and web applications, freelance development and personal tools, alongside an active acting career.</p>
           <p>My current professional work includes TTTuniverse, mayclinic and AXEAN Web. Outside that work, I am developing AUHIP and exploring practical creative tools.</p>
         </div>
         <div className="apple-action-row">
