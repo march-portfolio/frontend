@@ -111,6 +111,15 @@ export default function Home() {
             <Link className={page.visit_button} href="/software">
               Explore Engineering <i className="bi bi-arrow-right"></i>
             </Link>
+            <a
+              className={page.secondary_button}
+              href="/resume.pdf"
+              download="MarchTanu-Resume.pdf"
+              aria-label="Download resume (PDF)"
+            >
+              <i className="bi bi-download" aria-hidden="true"></i>
+              Download Resume
+            </a>
             <Link className={page.secondary_button} href="/pages/about">
               About Me
             </Link>
